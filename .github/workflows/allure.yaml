@@ -32,16 +32,16 @@ jobs:
                   npx cypress install
                   npx cypress cache list
 
- #           - name: Run Cypress
- #             continue-on-error: true
- #             run: npm run cy:run
- #             env:
- #                 CYPRESS_SPLIT_SPEC_API_KEY: '${{ secrets.SPLIT_SPEC_API_KEY }}'
-
-            - name: Run Cypress Cucumber
+            - name: Run Cypress
               continue-on-error: true
-              if: always()
-              run: npm run cy:cucumber:run
+              run: npm run cy:run
+              env:
+                  CYPRESS_SPLIT_SPEC_API_KEY: '${{ secrets.SPLIT_SPEC_API_KEY }}'
+
+#            - name: Run Cypress Cucumber
+#              continue-on-error: true
+#              if: always()
+#              run: npm run cy:cucumber:run
 
             - name: Get Allure history
               uses: actions/checkout@v2
