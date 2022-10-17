@@ -32,7 +32,7 @@ describe('empty spec', () => {
 
     cy.get(':nth-child(3) > .header-menu-item-btn').click()
     cy.wait(300)
-    cy.get('.lk-section-inner > .lk-btn > span').contains('글쓰기').should('exist')
+    //cy.get('.lk-section-inner > .lk-btn > span').contains('글쓰기').should('exist')
 
     cy.get('.lk-section-inner > .lk-btn').click()
     cy.wait(300)
@@ -52,21 +52,16 @@ describe('empty spec', () => {
     cy.wait(300)
     cy.get(':nth-child(4) > .header-menu-item-btn').click()
   })
+  
   it('4-2. site service (구독관리)', () => {
     cy.get('.ki-user').click()
-    cy.get('[href="/editinformation"]').contains('내 정보 수정').should('exist') 
-    cy.get('[href="/service/servicemanage"]').contains('서비스 구독').should('exist') 
-    cy.get('[href="/paymenthistory"]').contains('신청 내역').should('exist') 
-    cy.get('[href="/paymentManage"]').contains('매출 관리').should('exist') 
-    cy.get('[href="/settlement"]').contains('정산 관리').should('exist') 
-    cy.get(':nth-child(3) > .lhp-menu-item').contains('로그아웃').should('exist') 
     cy.wait(500)
 
     //서비스 구독 - 구독관리
     cy.get('[href="/service/servicemanage"]').click()
     cy.wait(500)
     
-    //cy.get('.settings_side_content > [href="/editinformation"]').contains('내 정보 수정').should('exist') 
+    cy.get('.settings_side_content > [href="/editinformation"]').contains('내 정보 수정').should('exist') 
     cy.get('.settings_side_content > [href="/service/servicemanage"]').contains('서비스 구독').should('exist') 
     cy.get('.settings_side_content > [href="/paymenthistory"]').contains('신청 내역').should('exist') 
     cy.get('.settings_side_content > [href="/paymentManage"]').contains('매출 관리').should('exist') 
@@ -213,7 +208,7 @@ describe('empty spec', () => {
     cy.get('.btn_dark').click()
     cy.wait(500)
 
-    cy.get('.form_content > .btn_common').contains('쿠폰 등록').should('exist')
+    //cy.get('.form_content > .btn_common').contains('쿠폰 등록').should('exist')
     cy.get('.form_content > .btn_common').click()
     cy.get('.error').contains('쿠폰코드를 입력해 주세요').should('exist')
     cy.get('.popup_t > .btn_common').click()
