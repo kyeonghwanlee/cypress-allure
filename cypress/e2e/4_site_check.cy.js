@@ -216,7 +216,7 @@ describe('empty spec', () => {
     cy.get('.settings_side_content > [href="/settlement"]').click()
     cy.wait(300)
 
-    cy.contains('1개월').click()
+    cy.get('.radio_wrap > :nth-child(3) > label > span').click()
     cy.get('.sales_form > .btn_common').click()
 
     cy.get('.btn-type > span').click()
