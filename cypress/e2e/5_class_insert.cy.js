@@ -69,7 +69,7 @@ describe('empty spec', () => {
     cy.get(':nth-child(1) > .lk-card-content > .lk-card-title').contains('cypress insert test').click({force: true})
     cy.wait(500)
     
-    cy.contains('강의실 입장').click({force: true})
+    cy.get('#view-step1 > .lk-button').click({force: true})
     cy.wait(500)
 
     //cy.get('.classroom-button-wrapper > .lk-button > .btn-label > span').click({force: true})
@@ -103,7 +103,7 @@ describe('empty spec', () => {
     cy.get(':nth-child(1) > .lk-card-content > .lk-card-title').contains('cypress insert test').click({force: true})
     cy.wait(500)
 
-    cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').click()
+    cy.get('#view-step2 > .cv-edit-btn').click()
     cy.wait(500)
     cy.get('.el-switch__core').click()
     cy.wait(500)
