@@ -27,7 +27,7 @@ describe('empty spec', () => {
     cy.wait(300)
     cy.get(':nth-child(2) > .header-menu-item-btn').click()
     cy.wait(300)
-    cy.get('[href="/classes/create"] > span').contains('클래스 생성').should('exist')
+    //cy.get('[href="/classes/create"] > span').contains('클래스 생성').should('exist')
     cy.get('.search-package-btn > span').contains('패키지 생성').should('exist')
 
     cy.get(':nth-child(3) > .header-menu-item-btn').click()
@@ -66,7 +66,7 @@ describe('empty spec', () => {
     cy.get('[href="/service/servicemanage"]').click()
     cy.wait(500)
     
-    cy.get('.settings_side_content > [href="/editinformation"]').contains('내 정보 수정').should('exist') 
+    //cy.get('.settings_side_content > [href="/editinformation"]').contains('내 정보 수정').should('exist') 
     cy.get('.settings_side_content > [href="/service/servicemanage"]').contains('서비스 구독').should('exist') 
     cy.get('.settings_side_content > [href="/paymenthistory"]').contains('신청 내역').should('exist') 
     cy.get('.settings_side_content > [href="/paymentManage"]').contains('매출 관리').should('exist') 
@@ -181,7 +181,7 @@ describe('empty spec', () => {
     cy.get('.content_td > .btn_common').contains('수정').should('exist') 
 
     cy.get('.button_container > .btn_common').click()
-    cy.get('.btn_point').contains('저장').should('exist') 
+    //cy.get('.btn_point').contains('저장').should('exist') 
     cy.get('.btn_gray').click()
     cy.wait(500)
 
