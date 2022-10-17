@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Oct 17 06:36:43 GMT 2022","Mon Oct 17 06:36:50 GMT 2022","6784","","empty spec","","","","1-4. Login should mypage login & logout",""
+"passed","Mon Oct 17 06:35:24 GMT 2022","Mon Oct 17 06:35:58 GMT 2022","33712","","empty spec","","","","0. 사이트 개설",""
+"passed","Mon Oct 17 06:36:33 GMT 2022","Mon Oct 17 06:36:39 GMT 2022","6641","","empty spec","","","","1-2. Login failse(no password)",""
+"passed","Mon Oct 17 06:36:39 GMT 2022","Mon Oct 17 06:36:43 GMT 2022","3585","","empty spec","","","","1-3. Login failse(no email & password)",""
+"passed","Mon Oct 17 06:36:27 GMT 2022","Mon Oct 17 06:36:33 GMT 2022","5356","","empty spec","","","","1-1. Login failse (error email&error password)",""
+"passed","Mon Oct 17 06:36:15 GMT 2022","Mon Oct 17 06:36:27 GMT 2022","11874","","empty spec","","","","1. login menu test",""
