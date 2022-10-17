@@ -36,12 +36,6 @@ describe('empty spec', () => {
 
     cy.get('.lk-section-inner > .lk-btn').click()
     cy.wait(300)
-    cy.get('.pbw-action-wrap > .outlined > span').contains('목록으로 돌아가기').should('exist')
-    cy.get('.pbw-action-wrap > button.lk-btn').contains('등록').should('exist')
-    cy.get('.pbw-category > :nth-child(1) > span').contains('일반').should('exist')
-    cy.get('.pbw-category > .outlined > span').contains('중요').should('exist')
-    cy.get('.pbw-footer-wrap > .outlined > span').contains('취소').should('exist')
-    cy.get('.pbw-footer-wrap > button.lk-btn > span').contains('등록').should('exist')
 
     cy.get('#text01').type('제목')
     cy.get('.fr-element').type('TEST')
@@ -61,18 +55,8 @@ describe('empty spec', () => {
     cy.get('[href="/service/servicemanage"]').click()
     cy.wait(500)
     
-    cy.get('.settings_side_content > [href="/editinformation"]').contains('내 정보 수정').should('exist') 
-    cy.get('.settings_side_content > [href="/service/servicemanage"]').contains('서비스 구독').should('exist') 
-    cy.get('.settings_side_content > [href="/paymenthistory"]').contains('신청 내역').should('exist') 
-    cy.get('.settings_side_content > [href="/paymentManage"]').contains('매출 관리').should('exist') 
-    cy.get('.settings_side_content > [href="/settlement"]').contains('정산 관리').should('exist')
-    cy.get('.settings_side_content > :nth-child(1)').contains('설정').should('exist')
-    cy.get('.settings_side_content > :nth-child(4)').contains('신청 관리').should('exist')
-    cy.get('.tab_container > .router-link-exact-active').contains('구독관리').should('exist') 
-    cy.get('[href="/service/servicehistory"]').contains('구독내역').should('exist') 
-    cy.get('[href="/service/servicepaymentinfo"]').contains('결제정보').should('exist') 
-    cy.get('[href="/service/servicecoupon"]').contains('할인 쿠폰').should('exist') 
     cy.get('.sub-btn').click()
+    cy.wait(500)
 
     cy.contains('무료').should('exist') 
     cy.contains('마이크로').should('exist') 
@@ -221,11 +205,6 @@ describe('empty spec', () => {
     //매출관리
     cy.get('.settings_side_content > [href="/paymentManage"]').click()
     cy.wait(300)
-    cy.get('.radio_wrap > :nth-child(1) > label > span').contains('오늘').should('exist')
-    cy.get('.radio_wrap > :nth-child(2) > label > span').contains('1주일').should('exist')
-    cy.get('.radio_wrap > :nth-child(3) > label > span').contains('1개월').should('exist')
-    cy.get('.radio_wrap > :nth-child(4) > label > span').contains('3개월').should('exist')
-    cy.get('.sales_form > .btn_common').contains('검색하기').should('exist')
     cy.get('.btn-type').contains('엑셀다운').should('exist')
     
     cy.get('.radio_wrap > :nth-child(3) > label > span').click()
@@ -237,12 +216,6 @@ describe('empty spec', () => {
     //정산관리
     cy.get('.settings_side_content > [href="/settlement"]').click()
     cy.wait(300)
-    cy.get('.radio_wrap > :nth-child(1) > label > span').contains('오늘').should('exist')
-    cy.get('.radio_wrap > :nth-child(2) > label > span').contains('1주일').should('exist')
-    cy.get('.radio_wrap > :nth-child(3) > label > span').contains('1개월').should('exist')
-    cy.get('.radio_wrap > :nth-child(4) > label > span').contains('3개월').should('exist')
-    cy.get('.sales_form > .btn_common').contains('검색하기').should('exist')
-    cy.get('.btn-type').contains('엑셀다운').should('exist')
 
     cy.contains('1개월').click()
     cy.get('.sales_form > .btn_common').click()
