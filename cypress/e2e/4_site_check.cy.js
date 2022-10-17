@@ -205,7 +205,6 @@ describe('empty spec', () => {
     //매출관리
     cy.get('.settings_side_content > [href="/paymentManage"]').click()
     cy.wait(300)
-    cy.get('.btn-type').contains('엑셀다운').should('exist')
     
     cy.get('.radio_wrap > :nth-child(3) > label > span').click()
     cy.get('.sales_form > .btn_common').click()
