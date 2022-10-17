@@ -83,10 +83,10 @@ describe('empty spec', () => {
   })
 
   it('5-4. class insert(강의 라이브 강의 참여하기-나의 강의실))', () => {
-    cy.get(':nth-child(4) > .header-menu-item-btn').click()
-    cy.wait(500)
+    //cy.get(':nth-child(4) > .header-menu-item-btn').click()
+    //cy.wait(500)
 
-    cy.get('.mt30 > .close-button').click({force: true})
+    //cy.get('.mt30 > .close-button').click({force: true})
     //cy.get('.lk-card-enter > .lk-btn > :nth-child(1)').click()
     //cy.wait(500)
     //cy.go('back')
