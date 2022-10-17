@@ -70,10 +70,10 @@ jobs:
               id: slack
               uses: slackapi/slack-github-action@v1.22.0
               with:
-                 channel-id: '#devops'
+                 channel-id: '#cypress'
                  payload: |
                   {
-                  "2분 후 https://kyeonghwanlee.github.io/cypress-allure 접속해서 결과 확인"
+                    "2분 후 접속 https://kyeonghwanlee.github.io/cypress-allure "
                   }
               env:
                  SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_CYPRESS_URL }}
