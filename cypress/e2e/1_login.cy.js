@@ -2,8 +2,34 @@ describe('empty spec', () => {
 
   beforeEach(function () {
     cy.viewport(1920,1080)
-    cy.visit('https://sso.liveklass.com/login')
+    //cy.visit('https://sso.liveklass.com/login')
+    cy.visit('https://sso.liveklass.com/login', {
+            onBeforeLoad(win) { // solution is here
+                Object.defineProperty(win.navigator, 'languages', {
+                value: ['ko-KR'],
+                });
+            },
+        });
     cy.wait(1000)
+
+    return Cypress.automation("remote:debugger:protocol", {
+        command: "Emulation.setLocaleOverride",
+        params: {
+          locale: "ko-KR",
+        },
+    })
+    .then(() => {
+        return Cypress.automation("remote:debugger:protocol", {
+            command: "Emulation.setTimezoneOverride",
+            params: {
+              timezoneId: "Asia/Seoul",
+            },
+          });
+    })
+    .then(() => {
+          const { locale, timeZone } = new Intl.DateTimeFormat().resolvedOptions();
+          console.log(locale, timeZone);
+    });
   })
 
 

@@ -11,17 +11,14 @@ describe('empty spec', () => {
             },
         });
         cy.wait(500)
-    })
-  
-    it('0. 사이트 개설', () => {
-        return Cypress.automation("remote:debugger:protocol", {
+        Cypress.automation("remote:debugger:protocol", {
             command: "Emulation.setLocaleOverride",
             params: {
               locale: "ko-KR",
             },
         })
         .then(() => {
-            return Cypress.automation("remote:debugger:protocol", {
+            Cypress.automation("remote:debugger:protocol", {
                 command: "Emulation.setTimezoneOverride",
                 params: {
                   timezoneId: "Asia/Seoul",
@@ -32,6 +29,9 @@ describe('empty spec', () => {
               const { locale, timeZone } = new Intl.DateTimeFormat().resolvedOptions();
               console.log(locale, timeZone);
         });
+    })
+  
+    it('0. 사이트 개설', () => {
         // 무료로 시작하기 클릭
         cy.get('.navbar5_menu-right > .button').invoke('removeAttr', 'target').click()
         cy.wait(500)
@@ -45,16 +45,7 @@ describe('empty spec', () => {
         cy.wait(500)
 
         cy.contains('올바른 이메일 형식으로 입력해 주세요.').should('exist') 
-        //cy.contains('필수 정보입니다.').should('exist')
-        cy.get('[id="fareCd"]').then(data=> {
-            if( data.val() == '00' ){
-                cy.get(':nth-child(1) > :nth-child(1) > .checkmark').click()
-                cy.get(':nth-child(1) > :nth-child(2) > [style="display: flex;"] > .lk-input-container > .container-input').type('10000')
-                cy.get('.btn-submit > .btn-label > span').click()
-                cy.wait(500)
-            }else{
-            }
-        })
+        cy.contains('필수 정보입니다.').should('exist')
         cy.contains('올바른 전화번호 형식으로 입력해 주세요').should('exist') 
 
         //로그인
