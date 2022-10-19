@@ -1,0 +1,1 @@
+{"uid":"b1a8273437954620fa374b796ffaacdd","children":[{"name":"0. 사이트 개설","uid":"3f98b521c5dff965","parentUid":"b1a8273437954620fa374b796ffaacdd","status":"passed","time":{"start":1666168114967,"stop":1666168120929,"duration":5962},"flaky":false,"newFailed":false,"newPassed":true,"newBroken":false,"retriesCount":0,"retriesStatusChange":false,"parameters":[]}],"name":"behaviors"}
