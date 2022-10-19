@@ -1,1 +1,0 @@
-{"total":2,"items":[{"uid":"7550afbd3582c838125d07e927b19119","name":"cypress/e2e.feature","statistic":{"failed":0,"broken":1,"skipped":0,"passed":0,"unknown":0,"total":1}},{"uid":"3c544d86eb083cdf0508c26f6743e419","name":"empty spec","statistic":{"failed":0,"broken":0,"skipped":0,"passed":22,"unknown":0,"total":22}}]}
