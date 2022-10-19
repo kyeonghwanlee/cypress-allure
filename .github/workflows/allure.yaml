@@ -73,7 +73,7 @@ jobs:
                  channel-id: '#cypress'
                  payload: |
                   {
-                    "2분 후 접속 https://kyeonghwanlee.github.io/cypress-allure "
+                     "text": "2분 후 접속 https://kyeonghwanlee.github.io/cypress-allure "
                   }
               env:
                  SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_CYPRESS_URL }}
