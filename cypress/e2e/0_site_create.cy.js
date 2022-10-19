@@ -11,14 +11,14 @@ describe('empty spec', () => {
             },
         });
         cy.wait(500)
-        Cypress.automation("remote:debugger:protocol", {
+        return Cypress.automation("remote:debugger:protocol", {
             command: "Emulation.setLocaleOverride",
             params: {
               locale: "ko-KR",
             },
         })
         .then(() => {
-            Cypress.automation("remote:debugger:protocol", {
+            return Cypress.automation("remote:debugger:protocol", {
                 command: "Emulation.setTimezoneOverride",
                 params: {
                   timezoneId: "Asia/Seoul",
