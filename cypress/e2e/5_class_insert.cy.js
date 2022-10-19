@@ -66,7 +66,7 @@ describe('empty spec', () => {
     cy.get('.swiper-slide-next > a').click({force: true})
     cy.wait(500)
 
-    cy.get(':nth-child(1) > .lk-card-content > .lk-card-title').contains('cypress insert test').click({force: true})
+    cy.get(':nth-child(1) > .lk-card-content > .lk-card-title').click({force: true})
     cy.wait(500)
     
     cy.get('#view-step1 > .lk-button').click({force: true})
@@ -103,10 +103,12 @@ describe('empty spec', () => {
     cy.get(':nth-child(1) > .lk-card-content > .lk-card-title').contains('cypress insert test').click({force: true})
     cy.wait(500)
 
-    cy.contains('클래스 관리').click()
+    cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').click()
     cy.wait(500)
+    
     cy.get('.el-switch__core').click()
     cy.wait(500)
+    
     cy.get('.lk-modal-footer > .primary > .btn-label > span').click()
   })
 
