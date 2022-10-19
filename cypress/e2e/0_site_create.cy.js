@@ -2,7 +2,14 @@ describe('empty spec', () => {
 
     beforeEach(function () {
         cy.viewport(1920,1080)
-        cy.visit('https://www.liveklass.com/')
+        //cy.visit('https://www.liveklass.com/')
+        cy.visit('https://www.liveklass.com/', {
+            onBeforeLoad(win) { // solution is here
+                Object.defineProperty(win.navigator, 'languages', {
+                value: ['ko-KR'],
+                });
+            },
+        });
         cy.wait(500)
     })
   
