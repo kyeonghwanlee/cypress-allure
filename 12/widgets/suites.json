@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"e2a537e9e134b191afefcb79b2b3d8f7","name":"Gherkin_parent_suite","statistic":{"failed":8,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":8}},{"uid":"3c544d86eb083cdf0508c26f6743e419","name":"empty spec","statistic":{"failed":0,"broken":0,"skipped":0,"passed":22,"unknown":0,"total":22}}]}
