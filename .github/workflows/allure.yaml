@@ -66,14 +66,14 @@ jobs:
                   publish_branch: allure
                   publish_dir: allure-history
 
-            - name: Slack Notification
-              id: slack
-              uses: slackapi/slack-github-action@v1.22.0
-              with:
-                 channel-id: '#cypress'
-                 payload: |
-                  {
-                     "text": "after 2 minutes cypress-allure Report Page : https://kyeonghwanlee.github.io/cypress-allure "
-                  }
-              env:
-                 SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_CYPRESS_URL }}
+#            - name: Slack Notification
+#              id: slack
+#              uses: slackapi/slack-github-action@v1.22.0
+#              with:
+#                 channel-id: '#cypress'
+#                payload: |
+#                  {
+#                     "text": "after 2 minutes cypress-allure Report Page : https://kyeonghwanlee.github.io/cypress-allure "
+#                  }
+#              env:
+#                 SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_CYPRESS_URL }}
