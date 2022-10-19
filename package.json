@@ -5,9 +5,9 @@
     "license": "Apache-2.0",
     "scripts": {
         "test": "node cypress/scripts/runner.js",
-        "cy:open": "npx cypress open --env allure=true --config specPattern=cypress/e2e/*.js --browser chrome",
+        "cy:open": "npx cypress open --env allure=true --config specPattern=cypress/e2e/0_site_create.cy.js --browser chrome",
+        "cy:run": "DEBUG=allure-plugin* npx cypress run --config specPattern=cypress/e2e/0_site_create.cy.js --env allure=true --browser chrome",
         "cy:cucumber:open": "npx cypress open --env allure=true --config specPattern=cypress/e2e/cucumber/*.feature,excludeSpecPattern=*.js --browser chrome",
-        "cy:run": "DEBUG=allure-plugin* npx cypress run --config specPattern=cypress/e2e/*.js --env allure=true --browser chrome",
         "cy:cucumber:run": "DEBUG=allure-plugin* npx cypress run --config specPattern=cypress/e2e/cucumber/*.feature,excludeSpecPattern=*.js --env allure=true --browser chrome",
         "allure:report": "allure generate allure-results --clean -o allure-report",
         "allure:clear": "rm -r allure-results/ allure-report cypress/screenshots || true",
