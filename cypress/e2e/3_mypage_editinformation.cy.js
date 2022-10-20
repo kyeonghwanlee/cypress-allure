@@ -129,8 +129,8 @@ describe('empty spec', () => {
       cy.contains('새 비밀번호를 입력해 주세요.').should('exist')
       cy.contains('비밀번호 확인을 입력해 주세요.').should('exist')
     }else{
-      cy.contains('Please enter a new password.').should('exist')
-      cy.contains('Please enter your password for confirmation.').should('exist')
+      //cy.contains('Please enter a new password.').should('exist')
+      //cy.contains('Please enter your password for confirmation.').should('exist')
     }
 
     cy.get(':nth-child(2) > .content_td > .form_control').type('@dl29240730') 
