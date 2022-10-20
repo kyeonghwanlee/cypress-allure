@@ -22,7 +22,7 @@ describe('empty spec', () => {
     if( i == 0 ){
       cy.contains('이메일 형식으로 입력해주세요.').should('exist')
     }else{
-      cy.contains('Please enter your email address.').should('exist')
+      cy.contains('Please enter a valid email address.').should('exist')
     }
     
   })
