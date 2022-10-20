@@ -95,7 +95,7 @@ describe('empty spec', () => {
      //cy.contains('New Password').should('exist')
       cy.contains('About Me').should('exist')
       cy.contains('Consent to receive marketing information').should('exist')
-      cy.contains('save').should('exist')
+      cy.contains('내 정보 저장하기').should('exist')
     }
 
     cy.get(':nth-child(6) > .content_td > .form_control').clear()
