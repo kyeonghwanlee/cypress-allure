@@ -1,5 +1,7 @@
 describe('empty spec', () => {
 
+    const i = 1 //1== github 0=local
+
     beforeEach(function () {
         cy.viewport(1920,1080)
         //cy.visit('https://www.liveklass.com/')
@@ -46,8 +48,11 @@ describe('empty spec', () => {
         cy.get('.form_group > .lk-input > .lk-input-inner > [data-testid="-input"]').clear()
         cy.get('[style="margin-bottom: 1.25rem;"] > .lk-input > .lk-input-inner > [data-testid="-input"]').clear()
 
-        //cy.contains('필수 정보입니다.').should('exist')
-        cy.contains('Required').should('exist')
+        if( i == 0 ){
+            cy.contains('필수 정보입니다.').should('exist')
+        }else{
+            cy.contains('Required').should('exist')
+        }
         cy.wait(500)
 
         cy.get('.form_group > .lk-input > .lk-input-inner > [data-testid="-input"]').type('kyeonghwan.lee@liveklass.com')
