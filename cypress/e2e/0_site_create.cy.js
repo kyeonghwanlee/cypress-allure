@@ -46,6 +46,7 @@ describe('empty spec', () => {
         cy.get('.form_group > .lk-input > .lk-input-inner > [data-testid="-input"]').clear()
         cy.get('[style="margin-bottom: 1.25rem;"] > .lk-input > .lk-input-inner > [data-testid="-input"]').clear()
 
+        //cy.contains('필수 정보입니다.').should('exist')
         cy.contains('Required').should('exist')
         cy.wait(500)
 
