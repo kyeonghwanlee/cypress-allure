@@ -11,25 +11,6 @@ describe('empty spec', () => {
             },
         });
     cy.wait(1000)
-
-    return Cypress.automation("remote:debugger:protocol", {
-        command: "Emulation.setLocaleOverride",
-        params: {
-          locale: "ko-KR",
-        },
-    })
-    .then(() => {
-        return Cypress.automation("remote:debugger:protocol", {
-            command: "Emulation.setTimezoneOverride",
-            params: {
-              timezoneId: "Asia/Seoul",
-            },
-          });
-    })
-    .then(() => {
-          const { locale, timeZone } = new Intl.DateTimeFormat().resolvedOptions();
-          console.log(locale, timeZone);
-    });
   })
 
 
