@@ -21,13 +21,23 @@ describe('empty spec', () => {
     cy.get(':nth-child(1) > .header-menu-item-btn').contains('운영 가이드').should('exist') 
     cy.get(':nth-child(2) > .header-menu-item-btn').contains('수강생 가이드').should('exist') 
     cy.get(':nth-child(3) > .header-menu-item-btn').contains('라클아카데미').should('exist') 
+    
     cy.contains('무료로 시작하기').should('exist') 
-    cy.contains('사이트').should('exist') 
-    cy.contains('페이지').should('exist') 
-    cy.contains('마이 페이지').should('exist') 
-    cy.contains('승인 대기중인 클래스').should('exist') 
-    cy.contains('내가 찜한 클래스').should('exist') 
-    cy.contains('완료한 클래스').should('exist') 
+    if( i == 0 ){
+      cy.contains('사이트').should('exist') 
+      cy.contains('페이지').should('exist') 
+      cy.contains('마이 페이지').should('exist') 
+      cy.contains('승인 대기중인 클래스').should('exist') 
+      cy.contains('내가 찜한 클래스').should('exist') 
+      cy.contains('완료한 클래스').should('exist') 
+    }else{
+      cy.contains('Sites').should('exist') 
+      cy.contains('Courses').should('exist') 
+      cy.contains('마이 페이지').should('exist') 
+      cy.contains('Enrolled classes').should('exist') 
+      cy.contains('Liked Classes').should('exist') 
+      cy.contains('Completed classes').should('exist') 
+    }
 
     // user stting button check
     cy.get('.ki-user').click()
@@ -51,19 +61,35 @@ describe('empty spec', () => {
     cy.wait(500)
     //phone chage
     
-    cy.contains('내 정보 수정').should('exist')
-    cy.contains('신청 내역').should('exist')
-    cy.contains('업로드').should('exist')
-    cy.contains('메일 인증 하기').should('exist')
-    cy.contains('프로필 사진').should('exist')
-    cy.contains('이름').should('exist')
-    cy.contains('이메일').should('exist')
-    cy.contains('휴대폰 번호').should('exist')
-    cy.contains('기존 비밀번호').should('exist')
-    cy.contains('새로운 비밀번호').should('exist')
-    cy.contains('자기소개').should('exist')
-    cy.contains('마케팅 정보 수신 동의').should('exist')
-    cy.contains('내 정보 저장하기').should('exist')
+    if( i == 0 ){
+      cy.contains('내 정보 수정').should('exist')
+      cy.contains('신청 내역').should('exist')
+      cy.contains('업로드').should('exist')
+      cy.contains('메일 인증 하기').should('exist')
+      cy.contains('프로필 사진').should('exist')
+      cy.contains('이름').should('exist')
+      cy.contains('이메일').should('exist')
+      cy.contains('휴대폰 번호').should('exist')
+      cy.contains('기존 비밀번호').should('exist')
+      cy.contains('새로운 비밀번호').should('exist')
+      cy.contains('자기소개').should('exist')
+      cy.contains('마케팅 정보 수신 동의').should('exist')
+      cy.contains('내 정보 저장하기').should('exist')
+    }else{
+      cy.contains('Edit My Information').should('exist')
+      cy.contains('Class application history').should('exist')
+      cy.contains('Upload').should('exist')
+      cy.contains('메일 인증 하기').should('exist')
+      cy.contains('Profile Photo').should('exist')
+      cy.contains('Name').should('exist')
+      cy.contains('Email').should('exist')
+      cy.contains('Mobile Number').should('exist')
+      cy.contains('Current Password').should('exist')
+      cy.contains('New Password').should('exist')
+      cy.contains('About Me').should('exist')
+      cy.contains('Consent to receive marketing information').should('exist')
+      cy.contains('save').should('exist')
+    }
 
     cy.get(':nth-child(6) > .content_td > .form_control').clear()
     cy.get(':nth-child(6) > .content_td > .form_control').type('01012345678')
@@ -76,18 +102,28 @@ describe('empty spec', () => {
     cy.wait(300)
 
     cy.get(':nth-child(1) > .content_td > .form_control').clear()
-    cy.contains('영문, 숫자, 특수문자 조합 8자 이상 (필수)').should('exist')
-
+    if( i == 0 ){
+      cy.contains('영문, 숫자, 특수문자 조합 8자 이상 (필수)').should('exist')
+    }else{
+      cy.contains('least 8 characters and include a number, a letter, and a special character.').should('exist')
+    }
     cy.get(':nth-child(1) > .content_td > .form_control').type('@dl292407')
     cy.get(':nth-child(2) > .content_td > .form_control').type('@dsfjl')
     cy.wait(300)
     
-    cy.contains('비밀번호는 8자리 이상 입력해 주세요.').should('exist')
+    if( i == 0 ){
+      cy.contains('비밀번호는 8자리 이상 입력해 주세요.').should('exist')
+    }else{
+      cy.contains('Please enter at least 8 digits for your password').should('exist')
+    }
 
     cy.get(':nth-child(2) > .content_td > .form_control').clear()
-
-    cy.contains('새 비밀번호를 입력해 주세요.').should('exist')
-    cy.contains('비밀번호 확인을 입력해 주세요.').should('exist')
+    if( i == 0 ){
+      cy.contains('Please enter a new password..').should('exist')
+      cy.contains('Please enter your password for confirmation.').should('exist')
+    }else{
+      cy.contains('Please enter at least 8 digits for your password').should('exist')
+    }
 
     cy.get(':nth-child(2) > .content_td > .form_control').type('@dl29240730') 
     cy.get(':nth-child(7) > :nth-child(3) > .content_td > .form_control').type('@dsfjl')
