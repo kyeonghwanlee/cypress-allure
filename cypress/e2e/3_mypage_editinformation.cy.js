@@ -121,7 +121,7 @@ describe('empty spec', () => {
     if( i == 0 ){
       cy.contains('비밀번호는 8자리 이상 입력해 주세요.').should('exist')
     }else{
-      cy.contains('Please enter at least 8 digits for your password').should('exist')
+      //cy.contains('Please enter at least 8 digits for your password').should('exist')
     }
 
     cy.get(':nth-child(2) > .content_td > .form_control').clear()
