@@ -1,1 +1,0 @@
-{"uid":"83edc06c07f9ae9e47eb6dd1b683e4e2","children":[{"name":"0. 사이트 개설","uid":"431b3238b163125c","parentUid":"83edc06c07f9ae9e47eb6dd1b683e4e2","status":"failed","time":{"start":1666229868595,"stop":1666229894227,"duration":25632},"flaky":true,"newFailed":false,"newPassed":false,"newBroken":false,"retriesCount":0,"retriesStatusChange":false,"parameters":[]}],"name":"packages"}
