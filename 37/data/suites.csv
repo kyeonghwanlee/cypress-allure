@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Oct 20 23:49:26 GMT 2022","Thu Oct 20 23:49:38 GMT 2022","12971","","empty spec","","","","3-2. editinformation email check",""
+"passed","Thu Oct 20 23:48:52 GMT 2022","Thu Oct 20 23:49:25 GMT 2022","33398","","empty spec","","","","3-1. editinformation page check",""
+"passed","Thu Oct 20 23:48:32 GMT 2022","Thu Oct 20 23:48:52 GMT 2022","20335","","empty spec","","","","3. mypage page check",""
