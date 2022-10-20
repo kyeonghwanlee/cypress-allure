@@ -1,0 +1,1 @@
+{"uid":"ab17fc5a4eb3bca4b216b548c7f9fcbc","children":[{"name":"0. 사이트 개설","uid":"2a3bc9b8860af9da","parentUid":"ab17fc5a4eb3bca4b216b548c7f9fcbc","status":"passed","time":{"start":1666230396572,"stop":1666230435006,"duration":38434},"flaky":false,"newFailed":false,"newPassed":true,"newBroken":false,"retriesCount":0,"retriesStatusChange":false,"parameters":[]}],"name":"timeline"}
