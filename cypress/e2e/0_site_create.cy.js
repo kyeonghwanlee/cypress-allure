@@ -28,7 +28,7 @@ describe('empty spec', () => {
         cy.wait(500)
 
         cy.contains('올바른 이메일 형식으로 입력해 주세요.').should('exist') 
-        cy.contains('Required').should('exist')
+        cy.contains('필수 정보입니다.').should('exist')
         cy.contains('올바른 전화번호 형식으로 입력해 주세요').should('exist') 
 
         //로그인
@@ -46,7 +46,7 @@ describe('empty spec', () => {
         cy.get('.form_group > .lk-input > .lk-input-inner > [data-testid="-input"]').clear()
         cy.get('[style="margin-bottom: 1.25rem;"] > .lk-input > .lk-input-inner > [data-testid="-input"]').clear()
 
-        cy.contains('필수 정보입니다.').should('exist')
+        cy.contains('Required').should('exist')
         cy.wait(500)
 
         cy.get('.form_group > .lk-input > .lk-input-inner > [data-testid="-input"]').type('kyeonghwan.lee@liveklass.com')
