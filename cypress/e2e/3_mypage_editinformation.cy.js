@@ -112,7 +112,7 @@ describe('empty spec', () => {
     if( i == 0 ){
       cy.contains('영문, 숫자, 특수문자 조합 8자 이상 (필수)').should('exist')
     }else{
-      cy.contains('least 8 characters and include a number, a letter, and a special character.').should('exist')
+      //cy.contains('least 8 characters and include a number, a letter, and a special character.').should('exist')
     }
     cy.get(':nth-child(1) > .content_td > .form_control').type('@dl292407')
     cy.get(':nth-child(2) > .content_td > .form_control').type('@dsfjl')
