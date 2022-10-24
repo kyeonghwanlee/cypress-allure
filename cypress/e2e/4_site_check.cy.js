@@ -336,7 +336,7 @@ describe('empty spec', () => {
     if( i == 0 ){
         cy.get('.error').contains('올바른 이메일 주소를 입력해 주세요.').should('exist') 
     }else{
-        cy.get('.error').contains('Please enter a valid email address.').should('exist') 
+        cy.get('.error').contains('The email field must be a valid email').should('exist') 
     }
     cy.wait(500)
 
