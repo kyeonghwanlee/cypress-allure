@@ -1,6 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"failed","Thu Oct 20 05:51:47 GMT 2022","Thu Oct 20 05:51:58 GMT 2022","10300","","empty spec","","","","2-4. createaccount failse(no checkbox)",""
-"passed","Thu Oct 20 05:51:58 GMT 2022","Thu Oct 20 05:52:04 GMT 2022","6906","","empty spec","","","","2-5. createaccount failse(no checkbox)",""
-"failed","Thu Oct 20 05:51:39 GMT 2022","Thu Oct 20 05:51:47 GMT 2022","8555","","empty spec","","","","2-3. createaccount failse(no email & password)",""
-"failed","Thu Oct 20 05:51:28 GMT 2022","Thu Oct 20 05:51:39 GMT 2022","10362","","empty spec","","","","2-2. createaccount failse(no password)",""
-"failed","Thu Oct 20 05:51:06 GMT 2022","Thu Oct 20 05:51:28 GMT 2022","22436","","empty spec","","","","2-1. createaccount failse (error email)",""

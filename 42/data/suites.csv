@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Oct 24 01:55:43 GMT 2022","Mon Oct 24 01:56:10 GMT 2022","27090","","empty spec","","","","4-2. site service (구독관리)",""
+"passed","Mon Oct 24 01:56:10 GMT 2022","Mon Oct 24 01:56:47 GMT 2022","37419","","empty spec","","","","4-3. site service (구독 나머지)",""
+"passed","Mon Oct 24 01:54:52 GMT 2022","Mon Oct 24 01:55:43 GMT 2022","50599","","empty spec","","","","4-1. site check",""
