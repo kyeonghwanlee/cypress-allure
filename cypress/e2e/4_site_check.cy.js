@@ -370,11 +370,10 @@ describe('empty spec', () => {
     
     if( i == 0 ){
       cy.get('.error').contains('쿠폰코드를 입력해 주세요').should('exist')
-      cy.get('.popup_t > .btn_common').click()
     }else{
-      cy.get('.error').contains('Invalid coupon code').should('exist')
-      cy.get('.popup_t > .btn_common').click()
+      cy.get('.error').contains('쿠폰코드를 입력해 주세요').should('exist')
     }
+    cy.get('.popup_t > .btn_common').click()
     cy.wait(500)
 
     //신청내역
