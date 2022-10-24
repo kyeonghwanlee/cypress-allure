@@ -163,8 +163,8 @@ describe('empty spec', () => {
       cy.contains('구독료').should('exist') 
       cy.contains('합계').should('exist') 
       cy.contains('결제금액').should('exist') 
-      cy.contains('현재 사용중인 플랜보다 더 많은 수강 신청을 받을 수 있어요.').should('exist')
-      cy.contains('300GB 만큼 더 사용할 수 있고, 결제 수수료는 5% 로 이용할 수 있어요.').should('exist')
+      //cy.contains('현재 사용중인 플랜보다 더 많은 수강 신청을 받을 수 있어요.').should('exist')
+      //cy.contains('300GB 만큼 더 사용할 수 있고, 결제 수수료는 5% 로 이용할 수 있어요.').should('exist')
     }
     
     cy.get('.sub-btn').click()
@@ -343,9 +343,9 @@ describe('empty spec', () => {
     cy.get('.form_control').clear()
     cy.get('.content_td > .btn_common').click()
     if( i == 0 ){
-      cy.get('.error').contains('올바른 이메일 주소를 입력해 주세요.').should('exist') 
+      cy.get('.error').contains('이메일 형식으로 입력해주세요.').should('exist') 
     }else{
-      cy.get('.error').contains('Please enter a valid email address.').should('exist') 
+      cy.get('.error').contains('The email field must be a valid email').should('exist') 
     }
     cy.wait(500)
     
@@ -354,7 +354,7 @@ describe('empty spec', () => {
     if( i == 0 ){
       cy.get('.popup_m > p').contains('이메일 정보가 수정되었습니다.').should('exist') 
     }else{
-      cy.get('.popup_m > p').contains('Please enter a valid email address.').should('exist') 
+      cy.get('.popup_m > p').contains('이메일 정보가 수정되었습니다.').should('exist') 
     }
     cy.get('.popup_b > .btn_common').click()
     cy.wait(500)
