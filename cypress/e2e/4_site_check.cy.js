@@ -231,7 +231,7 @@ describe('empty spec', () => {
     cy.get('[class="btn_common btn_gray btn_medium"]').click()
     */
   })
-  it('4-2. site service (구독 나머지)', () => {
+  it('4-3. site service (구독 나머지)', () => {
     cy.get('.ki-user').click()
     cy.wait(500)
 
@@ -330,21 +330,32 @@ describe('empty spec', () => {
     cy.get('.content_td > .btn_common').contains('저장').should('exist')
     cy.wait(500)
 
-    cy.get('.error').contains('올바른 이메일 주소를 입력해 주세요.').should('not.exist') 
     cy.get('.form_control').clear()
     cy.get('.form_control').type('dsfasfs')
     cy.get('.content_td > .btn_common').click()
-    cy.get('.error').contains('올바른 이메일 주소를 입력해 주세요.').should('exist') 
+    if( i == 0 ){
+        cy.get('.error').contains('올바른 이메일 주소를 입력해 주세요.').should('exist') 
+    }else{
+        cy.get('.error').contains('Please enter a valid email address.').should('exist') 
+    }
     cy.wait(500)
 
     cy.get('.form_control').clear()
     cy.get('.content_td > .btn_common').click()
-    cy.get('.error').contains('올바른 이메일 주소를 입력해 주세요.').should('exist') 
+    if( i == 0 ){
+      cy.get('.error').contains('올바른 이메일 주소를 입력해 주세요.').should('exist') 
+    }else{
+      cy.get('.error').contains('Please enter a valid email address.').should('exist') 
+    }
     cy.wait(500)
     
     cy.get('.form_control').type('kyeonghwan.lee@liveklass.com')
     cy.get('.content_td > .btn_common').click()
-    cy.get('.popup_m > p').contains('이메일 정보가 수정되었습니다.').should('exist') 
+    if( i == 0 ){
+      cy.get('.popup_m > p').contains('이메일 정보가 수정되었습니다.').should('exist') 
+    }else{
+      cy.get('.popup_m > p').contains('Please enter a valid email address.').should('exist') 
+    }
     cy.get('.popup_b > .btn_common').click()
     cy.wait(500)
 
