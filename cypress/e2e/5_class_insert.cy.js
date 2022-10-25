@@ -96,11 +96,13 @@ describe('empty spec', () => {
     //cy.go('back')
   })
 
-  it('5-5. class insert(강의 공개)', () => {
+  it.only('5-5. class insert(강의 공개)', () => {
     //프로그램 이동
     cy.get(':nth-child(2) > .header-menu-item-btn').click()
     cy.wait(100)
 
+    cy.get('.mt30 > .close-button').click({force: true})
+    
     //비공개 이동
     cy.get('.swiper-slide-next > a').click()
     cy.wait(100)
