@@ -1,5 +1,7 @@
 describe('empty spec', () => {
 
+  const i = 1 //1== github 0=local
+
   beforeEach(function () {
     cy.viewport(1920,1080)
     cy.visit('https://testlee001.liveklass.com/')
@@ -33,7 +35,7 @@ describe('empty spec', () => {
     cy.wait(1000)
 
     //cy.get('.lk-input-inner > input').clear()
-    cy.get('[placeholder="이름을 입력해 주세요"]').type('cypress insert test',{force: true})
+    cy.get('[data-testid="-input"]').type('cypress insert test',{force: true})
 
     cy.get('.class-section > :nth-child(1) > .lk-radio-group > :nth-child(2) > span').click()
     cy.get('.class-section > :nth-child(1) > .lk-radio-group > :nth-child(3) > span').click()
@@ -55,22 +57,24 @@ describe('empty spec', () => {
     //cy.get(':nth-child(1) > .timepicker-custom > .vue__time-picker > .dropdown > .select-list > .hours > [data-key="14"]').click()
     //cy.get(':nth-child(1) > .timepicker-custom > .vue__time-picker > .dropdown > .select-list > .minutes > [data-key="00"]').click()
   
-    cy.get('.createBtn > .btn-label > span').click({force: true})
+    cy.get('.createBtn').click({force: true})
   })
 
   it('5-2. class insert(강의 라이브 강의 참여하기-강의실 입장))', () => {
     //프로그램 이동
     cy.get(':nth-child(2) > .header-menu-item-btn').click({force: true})
-    cy.wait(500)
+    cy.wait(100)
 
+    //비공개 이동
     cy.get('.swiper-slide-next > a').click({force: true})
-    cy.wait(500)
+    cy.wait(100)
 
+    // 제일 첫번째 클래스 클릭
     cy.get(':nth-child(1) > .lk-card-content > .lk-card-title').click({force: true})
-    cy.wait(500)
+    cy.wait(100)
     
+    //강의실 입장
     cy.get('#view-step1 > .lk-button').click({force: true})
-    cy.wait(500)
 
     //cy.get('.classroom-button-wrapper > .lk-button > .btn-label > span').click({force: true})
     //cy.go('back')
@@ -95,21 +99,33 @@ describe('empty spec', () => {
   it('5-5. class insert(강의 공개)', () => {
     //프로그램 이동
     cy.get(':nth-child(2) > .header-menu-item-btn').click()
-    cy.wait(500)
+    cy.wait(100)
 
+    //비공개 이동
     cy.get('.swiper-slide-next > a').click()
-    cy.wait(500)
+    cy.wait(100)
 
+    //클래스 이동
     cy.get(':nth-child(1) > .lk-card-content > .lk-card-title').contains('cypress insert test').click({force: true})
-    cy.wait(500)
+    cy.wait(100)
 
+    //클래스 관리 이동
     cy.get('#view-step2 > .cv-edit-btn').click({force: true})
-    cy.wait(500)
-    
+    cy.wait(100)
+
+    // 클래스 공개 변환
     cy.get('.el-switch__core').click()
-    cy.wait(500)
-    
+    cy.wait(100)
     cy.get('.lk-modal-footer > .primary > .btn-label > span').click()
+    cy.wait(100)
+
+    //클래스 
+    cy.get(':nth-child(2) > .header-menu-item-btn').click()
+    cy.wait(100)
+
+    //check
+    cy.get(':nth-child(1) > .lk-card-content > .lk-card-title').contains('cypress insert test').should('exist') 
+    
   })
 
 })
