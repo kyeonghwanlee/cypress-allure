@@ -99,21 +99,21 @@ describe('empty spec', () => {
   it('5-5. class insert(강의 공개)', () => {
     //프로그램 이동
     cy.get(':nth-child(2) > .header-menu-item-btn').click()
-    cy.wait(100)
+    cy.wait(500)
 
     //cy.get('.mt30 > .close-button').click({force: true})
     
     //비공개 이동
     cy.get('.swiper-slide-next > a').click()
-    cy.wait(100)
+    cy.wait(500)
 
     //클래스 이동
     cy.get(':nth-child(1) > .lk-card-content > .lk-card-title').contains('cypress insert test').click({force: true})
-    cy.wait(100)
+    cy.wait(500)
 
     //클래스 관리 이동
     cy.get('#view-step2 > .cv-edit-btn').click({force: true})
-    cy.wait(100)
+    cy.wait(500)
 
     // 클래스 공개 변환
     cy.get('.el-switch__core').click()
