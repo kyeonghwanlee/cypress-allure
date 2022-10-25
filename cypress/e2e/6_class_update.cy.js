@@ -90,10 +90,10 @@ describe('empty spec', () => {
       cy.get('.btn-email-list > .btn-label > span').contains('발송 이력 확인').should('exist')
       cy.get('.btn-invite > .btn-label > span').contains('초대하기').should('exist')
     }else{
-      cy.get('.btn-move > .btn-label > span').contains('Back to class').should('exist')
+      cy.get('.btn-move > .btn-label > span').contains('클래스로 돌아가기').should('exist')
       cy.get('[style="font-size: 16px; color: rgb(17, 42, 68); margin-right: 10px; cursor: pointer; vertical-align: bottom; font-weight: 600;"]').contains('클래스 공개').should('exist')
       cy.get('.clicked > span').contains('수강생').should('exist')
-      cy.get('.lk-tabs > :nth-child(2) > span').contains('Class Setting').should('exist')
+      cy.get('.lk-tabs > :nth-child(2) > span').contains('클래스 설정').should('exist')
       cy.get('.lk-tabs > :nth-child(3) > span').contains('강의관리').should('exist')
       cy.get('.lk-tabs > :nth-child(4) > span').contains('결제설정').should('exist')
       cy.get('.lk-tabs > :nth-child(5) > span').contains('추가정보').should('exist')
@@ -213,7 +213,7 @@ describe('empty spec', () => {
     cy.get(':nth-child(1) > :nth-child(3) > .checks > .checkmark').click()
     cy.get(':nth-child(2) > .checks > .checkmark').click()
     cy.get(':nth-child(4) > .el-select > .el-input > .el-input__inner').click()
-    cy.contains('30일').click()
+    cy.contains('30 days').click()
     cy.wait(5000)
 
     cy.contains('변경사항 저장하기').click()
@@ -307,7 +307,8 @@ describe('empty spec', () => {
       cy.get('.discount-promotion.mb6').contains('Promotion').should('exist')
       cy.get(':nth-child(3) > .discount').contains('현재 판매가 1,000원').should('exist')
       cy.get('.flex > .discount-promotion').contains('5개월 무이자 할부 시').should('exist')
-      cy.get('.discount.mb6').contains('List price 10,000원 90% discount').should('exist')
+      cy.get('.discount.mb6').contains('List price 10,000원').should('exist')
+      cy.get('.discount.mb6').contains('90% discount').should('exist')
       cy.get('.price').contains('월 200원').should('exist')
     }
     cy.wait(2000)
@@ -393,7 +394,7 @@ describe('empty spec', () => {
     if( i == 0 ){
       cy.get('[style="width: 100%;"] > :nth-child(1) > div > .form_label').contains('(필수) 추가정보 입력').should('exist')
     }else{
-      cy.get('[style="width: 100%;"] > :nth-child(1) > div > .form_label').contains('(필수) 추가정보 입력').should('exist')
+      cy.get('[style="width: 100%;"] > :nth-child(1) > div > .form_label').contains('Enter additional information').should('exist')
     }
     //============================================================ 
     //원복
@@ -525,7 +526,7 @@ describe('empty spec', () => {
     cy.wait(100)
 
     //동영상 강의 클릭
-    cy.get('[style=""] > span').click()
+    cy.get('[style=""]').click()
     if( i == 0 ){
       cy.contains('업로드').should('exist')
       cy.contains('유투브').should('exist')
@@ -560,7 +561,7 @@ describe('empty spec', () => {
     cy.get('.warning > .btn-label > span').click()
     cy.wait(500)
 
-    cy.get('.lk-modal-footer > .primary > .btn-label > span').click()
+    cy.get('.confirm-button').click()
     cy.wait(500)
   })
 
