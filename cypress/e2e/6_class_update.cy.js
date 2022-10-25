@@ -21,7 +21,7 @@ describe('empty spec', () => {
     cy.wait(500)
   })
 
-  it.only('6-1. class update', () => {
+  it('6-1. class update', () => {
     //프로그램 이동
     cy.get(':nth-child(2) > .header-menu-item-btn').click()
     cy.wait(500)
@@ -60,7 +60,7 @@ describe('empty spec', () => {
       cy.get('.share-btns > .btn-label > span').contains('Share').should('exist')
       cy.get('#view-step1 > .lk-button > .btn-label > span').contains('Learn').should('exist')
       cy.get('.gray > .btn-label > span').contains('클래스 복사').should('exist')
-      cy.get('.warning > .btn-label > span').contains('Delete Class').should('exist')
+      cy.get('.warning > .btn-label > span').contains('클래스 삭제').should('exist')
       cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').should('exist')
       cy.get(':nth-child(6) > .class-description-wrapper > .class-description-title > .title').contains('Q & A').should('exist')
     }
