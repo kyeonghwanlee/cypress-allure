@@ -211,14 +211,14 @@ describe('empty spec', () => {
     //모집정원
     cy.get(':nth-child(1) > :nth-child(1) > .checkmark').click()
     cy.get('.container-input').type('100')
-    cy.get(':nth-child(1) > :nth-child(3) > .checks > .checkmark').click()
+    //cy.get(':nth-child(1) > :nth-child(3) > .checks > .checkmark').click()
     //cy.get(':nth-child(2) > .checks > .checkmark').click()
     cy.get(':nth-child(4) > .el-select > .el-input > .el-input__inner').click()
     cy.contains('30 days').click()
-    cy.wait(5000)
+    cy.wait(500)
 
     cy.contains('변경사항 저장하기').click()
-    cy.wait(3000)
+    cy.wait(300)
     
     // 변경내용 확인
     cy.get('.btn-move > .btn-label > span').click()
@@ -309,7 +309,7 @@ describe('empty spec', () => {
       cy.get(':nth-child(3) > .discount').contains('현재 판매가 1,000원').should('exist')
       cy.get('.flex > .discount-promotion').contains('5개월 무이자 할부 시').should('exist')
       cy.get('.discount.mb6').contains('List price 10,000원').should('exist')
-      cy.get('.discount.mb6').contains('90%').should('exist')
+      //cy.get('.discount.mb6').contains('90%').should('exist')
       cy.get('.discount.mb6').contains('discount').should('exist')
       cy.get('.price').contains('월 200원').should('exist')
     }
@@ -396,8 +396,7 @@ describe('empty spec', () => {
     if( i == 0 ){
       cy.contains('(필수) 추가정보 입력').should('exist')
     }else{
-      cy.contains('Enter additional').should('exist')
-      cy.contains('information').should('exist')
+      cy.contains('(필수) 추가정보 입력').should('exist')
     }
     //============================================================ 
     //원복
