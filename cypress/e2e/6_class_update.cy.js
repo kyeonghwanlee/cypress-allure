@@ -113,6 +113,7 @@ describe('empty spec', () => {
     cy.wait(500)
     //강사 추가 
     cy.get(':nth-child(2) > :nth-child(1) > .manage-facilitator-item').click()
+
     if( i == 0 ){
       cy.get('.lk-radio-group > .clicked > span').contains('이메일초대').should('exist')
       cy.get('.lk-radio-group > :nth-child(2) > span').contains('기존 강사에서 추가').should('exist')
@@ -140,7 +141,9 @@ describe('empty spec', () => {
     cy.get('.ended').click()
     cy.wait(500)
     //강사 삭제
+    
     cy.get(':nth-child(2) > :nth-child(1) > .manage-facilitator-item > .edit-box > .lk-icon > img').click()
+
     cy.wait(500)
     if( i == 0 ){
       cy.get('.button-container > .primary > .btn-label > span').contains('저장하기').should('exist')
