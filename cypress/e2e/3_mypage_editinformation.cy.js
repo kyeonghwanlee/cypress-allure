@@ -36,7 +36,7 @@ describe('empty spec', () => {
       cy.contains('마이 페이지').should('exist') 
       cy.contains('Enrolled classes').should('exist') 
       cy.contains('Liked Classes').should('exist') 
-      cy.contains('Completed classes').should('exist') 
+      //cy.contains('Completed classes').should('exist') 
     }
 
     // user stting button check
