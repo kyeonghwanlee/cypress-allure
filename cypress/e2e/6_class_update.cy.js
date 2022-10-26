@@ -75,7 +75,7 @@ describe('empty spec', () => {
     cy.wait(500)
 
     //클래스 관리 이동
-    cy.contains('클래스 관리').click()
+    cy.get('#view-step2 > .cv-edit-btn').click()
     cy.wait(500)
     
     //check
@@ -165,7 +165,7 @@ describe('empty spec', () => {
     cy.get(':nth-child(1) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
     //클래스 관리 이동
-    cy.contains('클래스 관리').click()
+    cy.get('#view-step2 > .cv-edit-btn').click()
     cy.wait(500)
     //클래스 설정
     cy.get('.lk-tabs > :nth-child(2) > span').click()
@@ -237,7 +237,7 @@ describe('empty spec', () => {
     }
     cy.wait(500)
     //원복
-    cy.contains('클래스 관리').click()
+    cy.get('#view-step2 > .cv-edit-btn').click()
     cy.wait(500)
     cy.get('.lk-tabs > :nth-child(2) > span').click()
     cy.wait(500)
@@ -264,7 +264,7 @@ describe('empty spec', () => {
     cy.get(':nth-child(1) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
     //클래스 관리 이동
-    cy.contains('클래스 관리').click()
+    cy.get('#view-step2 > .cv-edit-btn').click()
     cy.wait(500)
     
     //결제 설정
@@ -350,7 +350,7 @@ describe('empty spec', () => {
     cy.get(':nth-child(1) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
     //클래스 관리 이동
-    cy.contains('클래스 관리').click()
+    cy.get('#view-step2 > .cv-edit-btn').click()
     cy.wait(500)
     
     //추가정보
@@ -433,7 +433,7 @@ describe('empty spec', () => {
     cy.wait(500)
 
     //클래스 관리 이동
-    cy.contains('클래스 관리').click()
+    cy.get('#view-step2 > .cv-edit-btn').click()
     cy.wait(500)
     
     //추가정보
@@ -453,7 +453,7 @@ describe('empty spec', () => {
     cy.get(':nth-child(1) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
     //클래스 관리 이동
-    cy.contains('클래스 관리').click()
+    cy.get('#view-step2 > .cv-edit-btn').click()
     cy.wait(500)
     
     //강의관리
@@ -524,7 +524,7 @@ describe('empty spec', () => {
     cy.get(':nth-child(1) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
     //클래스 관리 이동
-    cy.contains('클래스 관리').click()
+    cy.get('#view-step2 > .cv-edit-btn').click()
     cy.wait(500)
     
     //강의관리

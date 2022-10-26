@@ -57,7 +57,7 @@ describe('empty spec', () => {
       cy.get('.lk-section-inner > .lk-btn > span').contains('글쓰기').should('exist')
       cy.get('.block-text-title').contains('공지사항').should('exist')
     }else{
-      cy.get('.lk-section-inner > .lk-btn > span').contains('write').should('exist')
+      cy.contains('write').should('exist')
       cy.get('.block-text-title').contains('Notice').should('exist')
     }
     cy.get('.lk-section-inner > .lk-btn').click()
