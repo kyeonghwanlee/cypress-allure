@@ -108,7 +108,7 @@ describe('empty spec', () => {
     cy.wait(500)
 
     //클래스 이동
-    cy.get(':nth-child(1) > .lk-card-content > .lk-card-title').contains('cypress insert test').click({force: true})
+    cy.contains('cypress insert test').click({force: true})
     cy.wait(500)
 
     //클래스 관리 이동
@@ -126,7 +126,7 @@ describe('empty spec', () => {
     cy.wait(100)
 
     //check
-    cy.get(':nth-child(1) > .lk-card-content > .lk-card-title').contains('cypress insert test').should('exist') 
+    cy.contains('cypress insert test').should('exist') 
     
   })
 
