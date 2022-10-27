@@ -65,6 +65,8 @@ describe('empty spec', () => {
     cy.get(':nth-child(2) > .header-menu-item-btn').click({force: true})
     cy.wait(100)
 
+    cy.get('.mt30 > .close-button').click({force: true})
+
     //비공개 이동
     cy.get('.swiper-slide-next > a').click({force: true})
     cy.wait(100)
@@ -74,7 +76,7 @@ describe('empty spec', () => {
     cy.wait(100)
     
     //강의실 입장
-    cy.get('#view-step1 > .lk-button').click({force: true})
+    cy.get('#view-step1 > .lk-button').click()
 
     //cy.get('.classroom-button-wrapper > .lk-button > .btn-label > span').click({force: true})
     //cy.go('back')
@@ -101,7 +103,7 @@ describe('empty spec', () => {
     cy.get(':nth-child(2) > .header-menu-item-btn').click()
     cy.wait(500)
 
-    //cy.get('.mt30 > .close-button').click({force: true})
+    cy.get('.mt30 > .close-button').click({force: true})
     
     //비공개 이동
     cy.get('.swiper-slide-next > a').click()

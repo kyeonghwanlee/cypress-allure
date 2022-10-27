@@ -58,7 +58,7 @@ describe('empty spec', () => {
       cy.get('.block-text-title').contains('공지사항').should('exist')
     }else{
       //cy.contains('write').should('exist')
-      cy.get('.block-text-title').contains('Notice').should('exist')
+      //cy.get('.block-text-title').contains('Notice').should('exist')
     }
     cy.get('.lk-section-inner > .lk-btn').click()
     cy.wait(300)
@@ -171,7 +171,7 @@ describe('empty spec', () => {
     cy.wait(100)
     
     cy.get('.lk-close-button').click()
-    cy.get('.primary > .btn-label > span').click()
+    //cy.get('.primary > .btn-label > span').click()
     
     /*
     cy.get('.popup_t > span').contains('새로운 카드 정보 등록').should('exist') 
@@ -343,7 +343,7 @@ describe('empty spec', () => {
     cy.get('.form_control').clear()
     cy.get('.content_td > .btn_common').click()
     if( i == 0 ){
-      cy.get('.error').contains('이메일 형식으로 입력해주세요.').should('exist') 
+      cy.get('.error').contains('올바른 이메일 주소를 입력해 주세요.').should('exist') 
     }else{
       cy.get('.error').contains('The email field must be a valid email').should('exist') 
     }
