@@ -74,6 +74,8 @@ describe('empty spec', () => {
     cy.get(':nth-child(1) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
 
+    cy.get('.mt30 > .close-button').click({force: true})
+
     //클래스 관리 이동
     cy.get('#view-step2 > .cv-edit-btn').click()
     cy.wait(500)
@@ -164,6 +166,9 @@ describe('empty spec', () => {
     cy.wait(500)
     cy.get(':nth-child(1) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
+
+    cy.get('.mt30 > .close-button').click({force: true})
+
     //클래스 관리 이동
     cy.get('#view-step2 > .cv-edit-btn').click()
     cy.wait(500)
@@ -264,6 +269,9 @@ describe('empty spec', () => {
     cy.wait(500)
     cy.get(':nth-child(1) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
+
+    cy.get('.mt30 > .close-button').click({force: true})
+
     //클래스 관리 이동
     cy.get('#view-step2 > .cv-edit-btn').click()
     cy.wait(500)
@@ -350,6 +358,9 @@ describe('empty spec', () => {
     cy.wait(500)
     cy.get(':nth-child(1) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
+
+    cy.get('.mt30 > .close-button').click({force: true})
+
     //클래스 관리 이동
     cy.get('#view-step2 > .cv-edit-btn').click()
     cy.wait(500)
@@ -453,6 +464,9 @@ describe('empty spec', () => {
     cy.wait(500)
     cy.get(':nth-child(1) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
+    
+    cy.get('.mt30 > .close-button').click({force: true})
+
     //클래스 관리 이동
     cy.get('#view-step2 > .cv-edit-btn').click()
     cy.wait(500)
@@ -524,6 +538,9 @@ describe('empty spec', () => {
     cy.wait(500)
     cy.get(':nth-child(1) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
+
+    cy.get('.mt30 > .close-button').click({force: true})
+
     //클래스 관리 이동
     cy.get('#view-step2 > .cv-edit-btn').click()
     cy.wait(500)
@@ -566,6 +583,7 @@ describe('empty spec', () => {
     //프로그램 이동
     cy.get(':nth-child(2) > .header-menu-item-btn').click()
     cy.wait(500)
+
     cy.get(':nth-child(1) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
     
