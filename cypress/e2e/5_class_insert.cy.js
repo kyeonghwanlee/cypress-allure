@@ -21,7 +21,7 @@ describe('empty spec', () => {
     cy.wait(500)
   })
 
-  it.only('5-1. class insert(강의 라이브 생성))', () => {
+  it('5-1. class insert(강의 라이브 생성))', () => {
     //프로그램 이동
     cy.get(':nth-child(2) > .header-menu-item-btn').click()
     cy.wait(100)
