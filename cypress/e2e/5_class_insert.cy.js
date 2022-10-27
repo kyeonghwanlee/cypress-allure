@@ -35,7 +35,7 @@ describe('empty spec', () => {
     cy.wait(1000)
 
     //cy.get('.lk-input-inner > input').clear()
-    cy.get('[data-testid="-input"]').type({force: true})
+    cy.get('[data-testid="-input"]').type('cypress insert test')
 
     cy.get('.class-section > :nth-child(1) > .lk-radio-group > :nth-child(2) > span').click()
     cy.get('.class-section > :nth-child(1) > .lk-radio-group > :nth-child(3) > span').click()
