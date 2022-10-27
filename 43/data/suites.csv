@@ -1,6 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Tue Oct 25 02:15:06 GMT 2022","Tue Oct 25 02:15:54 GMT 2022","48008","","empty spec","","","","5-1. class insert(강의 라이브 생성))",""
-"passed","Tue Oct 25 02:16:31 GMT 2022","Tue Oct 25 02:16:46 GMT 2022","15082","","empty spec","","","","5-4. class insert(강의 라이브 강의 참여하기-나의 강의실))",""
-"passed","Tue Oct 25 02:16:16 GMT 2022","Tue Oct 25 02:16:31 GMT 2022","15135","","empty spec","","","","5-3. class insert(강의 라이브 강의 참여하기-팝업))",""
-"failed","Tue Oct 25 02:16:46 GMT 2022","Tue Oct 25 02:17:07 GMT 2022","20792","","empty spec","","","","5-5. class insert(강의 공개)",""
-"passed","Tue Oct 25 02:15:54 GMT 2022","Tue Oct 25 02:16:16 GMT 2022","22104","","empty spec","","","","5-2. class insert(강의 라이브 강의 참여하기-강의실 입장))",""
