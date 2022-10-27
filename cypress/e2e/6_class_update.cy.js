@@ -197,6 +197,7 @@ describe('empty spec', () => {
     cy.get('.lk-input-inner > input').clear()
     cy.get('.lk-input-inner > input').type('cypress update test')
     cy.wait(500)
+    
     //클래스 및 강사 소개
     cy.get(':nth-child(1) > .lk-textarea > .ui-textarea').clear()
     cy.get(':nth-child(2) > .lk-textarea > .ui-textarea').clear()
