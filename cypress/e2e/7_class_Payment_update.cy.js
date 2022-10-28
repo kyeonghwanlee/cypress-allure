@@ -265,6 +265,8 @@ describe('empty spec', () => {
         cy.get('.btn_center_box > .btn_new_point').click()
         cy.wait(500)
 
+        cy.get('.popup_b > .btn_common').click()
+
         //로그아웃
         cy.get('.ki-user').click()
         cy.get(':nth-child(3) > .lhp-menu-item').click()
@@ -331,6 +333,8 @@ describe('empty spec', () => {
         cy.get(':nth-child(2) > :nth-child(1) > label > span').click()
         cy.get('.btn_center_box > .btn_new_point').click()
         cy.wait(500)
+
+        cy.get('.popup_b > .btn_common').click()
 
         //로그아웃
         cy.get('.ki-user').click()
