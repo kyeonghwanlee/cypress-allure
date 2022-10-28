@@ -1,6 +1,6 @@
 describe('empty spec', () => {
 
-    const i =0 //1== github 0=local
+    const i = 1 //1== github 0=local
 
     beforeEach(function () {
         cy.viewport(1920,1080)
@@ -203,8 +203,8 @@ describe('empty spec', () => {
         cy.get('.pay > .btn-label > span').click()
         cy.wait(500)
 
-        cy.get('label > span').click()
-        cy.get('.btn_new_point').click()
+        cy.get(':nth-child(2) > :nth-child(1) > label > span').click()
+        cy.get('.btn_center_box > .btn_new_point').click()
         cy.wait(500)
 
         //로그아웃
@@ -270,8 +270,8 @@ describe('empty spec', () => {
         cy.get('.pay > .btn-label > span').click()
         cy.wait(500)
 
-        cy.get('label > span').click()
-        cy.get('.btn_new_point').click()
+        cy.get(':nth-child(2) > :nth-child(1) > label > span').click()
+        cy.get('.btn_center_box > .btn_new_point').click()
         cy.wait(500)
 
         //로그아웃
@@ -328,7 +328,7 @@ describe('empty spec', () => {
         })
 
         //결제 설정
-        cy.get('.lk-tabs > :nth-child(4) > span').click()
+        cy.get('.lk-tabs > :nth-child(4)').click()
         cy.wait(500)
 
         cy.get('[id="fareCd"]').then(data=> {
