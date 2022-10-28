@@ -327,7 +327,8 @@ describe('empty spec', () => {
         cy.wait(500)
 
         //클래스 신청
-        cy.get('.pay > .btn-label > span').click()
+        //cy.get('.pay > .btn-label > span').click()
+        cy.get('#view-step1 > .lk-button').click()
         cy.wait(500)
 
         cy.get(':nth-child(2) > :nth-child(1) > label > span').click()
@@ -339,8 +340,6 @@ describe('empty spec', () => {
         //로그아웃
         cy.get('.ki-user').click()
         cy.get(':nth-child(3) > .lhp-menu-item').click()
-        
-        cy.get('.header-action > .outlined > span').click()
         cy.wait(500)
 
         //로그인
