@@ -227,7 +227,7 @@ describe('empty spec', () => {
         cy.wait(500)    
     })
 
-    it('7-4. 무료로 설정한 클래스에서 수강신청을 한 경우 서비스 구독 수강신청 건수 차감 안 됨', () => {
+    it.only('7-4. 무료로 설정한 클래스에서 수강신청을 한 경우 서비스 구독 수강신청 건수 차감 안 됨', () => {
         cy.get('.ki-user').click()
         cy.get('[href="/service/servicemanage"]').click()
         cy.wait(500)
@@ -235,6 +235,8 @@ describe('empty spec', () => {
         cy.get(':nth-child(1) > .bold').contains('수강신청 0건 사용 중').should('exist')
         cy.wait(500)
         
+        cy.get('.mt30 > .close-button').click({force: true})
+
         //로그아웃
         cy.get('.ki-user').click()
         cy.get(':nth-child(3) > .lhp-menu-item').click()
@@ -258,10 +260,10 @@ describe('empty spec', () => {
         cy.wait(500)
 
         //클래스 신청
-        cy.get('.pay > .btn-label > span').click()
+        cy.get('.pay').click()
         cy.wait(500)
 
-        cy.get(':nth-child(2) > :nth-child(1) > label > span').click()
+        cy.get('label > span').click()
         cy.get('.btn_center_box > .btn_new_point').click()
         cy.wait(500)
 
@@ -304,6 +306,8 @@ describe('empty spec', () => {
         cy.get(':nth-child(1) > .bold').contains('수강신청 0건 사용 중').should('exist')
         cy.wait(500)
         
+        cy.get('.mt30 > .close-button').click({force: true})
+
         //로그아웃
         cy.get('.ki-user').click()
         cy.get(':nth-child(3) > .lhp-menu-item').click()
@@ -327,10 +331,10 @@ describe('empty spec', () => {
         cy.wait(500)
 
         //클래스 신청
-        cy.get('.pay > .btn-label > span').click()
+        cy.get('.pay').click()
         cy.wait(500)
 
-        cy.get(':nth-child(2) > :nth-child(1) > label > span').click()
+        cy.get('label > span').click()
         cy.get('.btn_center_box > .btn_new_point').click()
         cy.wait(500)
 
