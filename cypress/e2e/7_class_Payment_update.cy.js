@@ -360,6 +360,44 @@ describe('empty spec', () => {
         cy.wait(500)
 
         cy.get(':nth-child(1) > .bold').contains('수강신청 0건 사용 중').should('exist')
+        cy.wait(500)
+
+        // 수강 취소
+        cy.get(':nth-child(2) > .header-menu-item-btn').click()
+        cy.wait(500)
+
+        cy.get(':nth-child(2) > .lk-card-img > .lk-card-link').click()
+        cy.wait(500)
+        
+        cy.get('.mt30 > .close-button').click({force: true})
+
+        //클래스 관리
+        cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').click()
+        cy.wait(500)
+
+        cy.get('.search-top-container > :nth-child(1) > .lk-checkbox > .checkmark').click()
+        cy.get(':nth-child(1) > .el-select > .el-input > .el-input__inner').click()
+        cy.get('[class="el-select-dropdown__item hover"]').click()
+        cy.get('.apply-button').click()
+
+        // 수강 취소
+        cy.get(':nth-child(2) > .header-menu-item-btn').click()
+        cy.wait(500)
+
+        cy.get(':nth-child(2) > .lk-card-img > .lk-card-link').click()
+        cy.wait(500)
+        
+        cy.get('.mt30 > .close-button').click({force: true})
+
+        //클래스 관리
+        cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').click()
+        cy.wait(500)
+
+        cy.get('.search-top-container > :nth-child(1) > .lk-checkbox > .checkmark').click()
+        cy.get(':nth-child(1) > .el-select > .el-input > .el-input__inner').click()
+        cy.get('[class="el-select-dropdown__item hover"]').click()
+        cy.get('.apply-button').click()
+
     })
 
     it('7-6. 원복', () => {
