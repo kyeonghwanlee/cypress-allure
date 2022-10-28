@@ -596,4 +596,62 @@ describe('empty spec', () => {
     cy.wait(500)
   })
 
+  it('6-9. 원복', () => {
+    cy.get(':nth-child(2) > .header-menu-item-btn').click()
+    cy.wait(500)
+
+    cy.get(':nth-child(2) > .lk-card-img > .lk-card-link').click()
+    cy.wait(500)
+    
+    cy.get('.mt30 > .close-button').click({force: true})
+
+    //클래스 관리
+    cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').click()
+    cy.wait(500)
+
+    cy.get('.lk-tabs > :nth-child(2) > span').click()
+    cy.wait(500)
+
+    cy.get('[id="choiseTypeCd"]').then(data=> {
+        if( data.val() == '00' ){
+        }else{
+            cy.get(':nth-child(2) > .checks > .checkmark').click()
+            cy.get('.btn-submit > .btn-label > span').click()
+            cy.wait(500)
+        }
+    })
+
+    //결제 설정
+    cy.get('.lk-tabs > :nth-child(4) > span').click()
+    cy.wait(500)
+
+    cy.get('[id="fareCd"]').then(data=> {
+        if( data.val() == '00' ){
+        }else{
+            cy.get('[id="ss"]').then(data=> {
+                if( data.val() == 'true' ){
+                    cy.get(':nth-child(2) > .row-inner > :nth-child(2) > [style="display: flex;"] > .lk-input-container > .container-input').clear()
+                    cy.get('.form_group > :nth-child(1) > .row-subtitle').click()
+                    cy.get(':nth-child(2) > .checks').click()
+                    cy.wait(500)
+                }
+            })
+            cy.get(':nth-child(1) > :nth-child(2) > [style="display: flex;"] > .lk-input-container > .container-input').clear()
+            cy.get(':nth-child(1) > :nth-child(1) > .checkmark').click()
+            cy.wait(500)
+        }
+    })
+    cy.get('[id="addOptionCd"]').then(data=> {
+        if( data.val() == 'true' ){
+            cy.get('[data-testid="-input"]').clear()
+            cy.get(':nth-child(4) > [style="display: flex;"] > .lk-input-container > .container-input').clear()
+            cy.get('.class-manage-wrapper > :nth-child(2) > .lk-checkbox > .checkmark').click()
+            cy.wait(500)
+        }
+    })
+
+    cy.get('.btn-submit > .btn-label > span').click()
+    cy.wait(500)    
+  })
+
 })

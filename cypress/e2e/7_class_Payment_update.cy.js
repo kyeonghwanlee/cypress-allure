@@ -122,7 +122,7 @@ describe('empty spec', () => {
         cy.wait(500)
 
         cy.get('.btn-submit > .btn-label > span').click()
-        cy.contains('무료 클래스이거나 최종금액이 0원인 경우 운영자 선정 기능을 사용할 수 없습니다.').should('exist')
+        cy.contains('운영자 선정 기능은 유료 클래스에 한해 이용하실 수 있습니다.').should('exist')
         cy.wait(500)
     })
 
@@ -193,7 +193,10 @@ describe('empty spec', () => {
         cy.get('.lk-button').click()
         cy.wait(500)
         
-        cy.visit('https://testlee001.liveklass.com/classes/110630')
+        cy.get(':nth-child(2) > .header-menu-item-btn').click()
+        cy.wait(500)
+
+        cy.get(':nth-child(2) > .lk-card-img > .lk-card-link').click()
         cy.wait(500)
 
         //클래스 신청
@@ -257,7 +260,10 @@ describe('empty spec', () => {
         cy.get('.lk-button').click()
         cy.wait(500)
         
-        cy.visit('https://testlee001.liveklass.com/classes/110001')
+        cy.get(':nth-child(2) > .header-menu-item-btn').click()
+        cy.wait(500)
+
+        cy.get(':nth-child(2) > .lk-card-img > .lk-card-link').click()
         cy.wait(500)
 
         //클래스 신청
@@ -296,4 +302,61 @@ describe('empty spec', () => {
         cy.get(':nth-child(1) > .bold').contains('수강신청 0건 사용 중').should('exist')
     })
 
+    it('7-6. 원복', () => {
+        cy.get(':nth-child(2) > .header-menu-item-btn').click()
+        cy.wait(500)
+
+        cy.get(':nth-child(2) > .lk-card-img > .lk-card-link').click()
+        cy.wait(500)
+        
+        cy.get('.mt30 > .close-button').click({force: true})
+
+        //클래스 관리
+        cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').click()
+        cy.wait(500)
+
+        cy.get('.lk-tabs > :nth-child(2) > span').click()
+        cy.wait(500)
+
+        cy.get('[id="choiseTypeCd"]').then(data=> {
+            if( data.val() == '00' ){
+            }else{
+                cy.get(':nth-child(2) > .checks > .checkmark').click()
+                cy.get('.btn-submit > .btn-label > span').click()
+                cy.wait(500)
+            }
+        })
+
+        //결제 설정
+        cy.get('.lk-tabs > :nth-child(4) > span').click()
+        cy.wait(500)
+
+        cy.get('[id="fareCd"]').then(data=> {
+            if( data.val() == '00' ){
+            }else{
+                cy.get('[id="ss"]').then(data=> {
+                    if( data.val() == 'true' ){
+                        cy.get(':nth-child(2) > .row-inner > :nth-child(2) > [style="display: flex;"] > .lk-input-container > .container-input').clear()
+                        cy.get('.form_group > :nth-child(1) > .row-subtitle').click()
+                        cy.get(':nth-child(2) > .checks').click()
+                        cy.wait(500)
+                    }
+                })
+                cy.get(':nth-child(1) > :nth-child(2) > [style="display: flex;"] > .lk-input-container > .container-input').clear()
+                cy.get(':nth-child(1) > :nth-child(1) > .checkmark').click()
+                cy.wait(500)
+            }
+        })
+        cy.get('[id="addOptionCd"]').then(data=> {
+            if( data.val() == 'true' ){
+                cy.get('[data-testid="-input"]').clear()
+                cy.get(':nth-child(4) > [style="display: flex;"] > .lk-input-container > .container-input').clear()
+                cy.get('.class-manage-wrapper > :nth-child(2) > .lk-checkbox > .checkmark').click()
+                cy.wait(500)
+            }
+        })
+
+        cy.get('.btn-submit > .btn-label > span').click()
+        cy.wait(500)    
+    })
 })
