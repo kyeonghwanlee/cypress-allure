@@ -70,7 +70,7 @@ describe('empty spec', () => {
     cy.wait(100)
 
     // 제일 첫번째 클래스 클릭
-    cy.contains('cypress insert test').click()
+    cy.contains('cypress insert test').click({force: true})
     cy.wait(100)
     
     //강의실 입장
