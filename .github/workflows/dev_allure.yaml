@@ -1,0 +1,79 @@
+name: allure-report
+
+on:
+  workflow_dispatch:
+  
+jobs:
+    generate-report:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - name: Download Cypress
+              uses: bahmutov/npm-install@v1
+              env:
+                  CYPRESS_INSTALL_BINARY: 0
+
+            - name: Check Cypress cache
+              run: |
+                  npx cypress cache path
+                  npx cypress cache list
+
+            - name: restore / cache the binary
+              id: cache-cypress
+              uses: actions/cache@v1
+              with:
+                  path: ~/.cache/Cypress
+                  key: >-
+                      cypress-cache-v2-${{ runner.os }}-${{ hashFiles('**/package.json')
+                      }}
+
+            - name: Install Cypress
+              run: |
+                  npx cypress install
+                  npx cypress cache list
+
+            - name: Run Cypress
+              continue-on-error: true
+              run: npm run cy:dev_run
+              env:
+                  CYPRESS_SPLIT_SPEC_API_KEY: '${{ secrets.SPLIT_SPEC_API_KEY }}'
+
+#            - name: Run Cypress Cucumber
+#              continue-on-error: true
+#              if: always()
+#              run: npm run cy:cucumber:run
+
+            - name: Get Allure history
+              uses: actions/checkout@v2
+              if: always()
+              continue-on-error: true
+              with:
+                  ref: allure
+                  path: allure
+
+            - name: Generate Allure Report
+              uses: simple-elf/allure-report-action@master
+              if: always()
+              with:
+                  allure_results: allure-results
+                  gh_pages: allure
+
+            - name: Deploy report to Github Pages
+              if: always()
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_branch: allure
+                  publish_dir: allure-history
+
+#            - name: Slack Notification
+#              id: slack
+#              uses: slackapi/slack-github-action@v1.22.0
+#              with:
+#                 channel-id: '#cypress'
+#                payload: |
+#                  {
+#                     "text": "after 2 minutes cypress-allure Report Page : https://kyeonghwanlee.github.io/cypress-allure "
+#                  }
+#              env:
+#                 SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_CYPRESS_URL }}
