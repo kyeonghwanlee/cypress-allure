@@ -65,8 +65,6 @@ describe('empty spec', () => {
     cy.get(':nth-child(2) > .header-menu-item-btn').click({force: true})
     cy.wait(100)
 
-    cy.get('.mt30 > .close-button').click({force: true})
-
     //비공개 이동
     cy.get('.swiper-slide-next > a').click({force: true})
     cy.wait(100)
@@ -103,8 +101,6 @@ describe('empty spec', () => {
     cy.get(':nth-child(2) > .header-menu-item-btn').click()
     cy.wait(500)
 
-    cy.get('.mt30 > .close-button').click({force: true})
-    
     //비공개 이동
     cy.get('.swiper-slide-next > a').click()
     cy.wait(500)
