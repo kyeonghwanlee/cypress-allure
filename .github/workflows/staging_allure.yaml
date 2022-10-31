@@ -1,4 +1,4 @@
-name: allure-report
+name: staging allure-report
 
 on:
   workflow_dispatch:

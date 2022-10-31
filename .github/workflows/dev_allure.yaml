@@ -1,4 +1,4 @@
-name: allure-report
+name: dev allure-report
 
 on:
   workflow_dispatch:

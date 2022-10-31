@@ -1,4 +1,4 @@
-name: allure-report
+name: prod allure-report
 
 on:
   workflow_dispatch:
