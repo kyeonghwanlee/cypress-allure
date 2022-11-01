@@ -60,13 +60,19 @@ describe('empty spec', () => {
     cy.get('.createBtn').click({force: true})
   })
 
-  it.only('5-2. class insert(강의 라이브 강의 참여하기-강의실 입장))', () => {
+  it('5-2. class insert(강의 라이브 강의 참여하기-강의실 입장))', () => {
     //프로그램 이동
     cy.get(':nth-child(2) > .header-menu-item-btn').click({force: true})
     cy.wait(100)
 
     //비공개 이동
-    cy.get('.swiper-slide-next > a').click()
+    //cy.get('.swiper-slide-next > a').click()
+    if( i == 0 ){
+      cy.contains('비공개').click;
+    }else{
+      cy.contains('Private').click;
+    }
+    
     cy.wait(100)
 
     // 제일 첫번째 클래스 클릭
