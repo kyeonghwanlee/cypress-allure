@@ -60,6 +60,7 @@ describe('empty spec', () => {
     cy.get('.createBtn').click({force: true})
   })
 
+  /*
   it('5-2. class insert(강의 라이브 강의 참여하기-강의실 입장))', () => {
     //프로그램 이동
     cy.get(':nth-child(2) > .header-menu-item-btn').click({force: true})
@@ -101,6 +102,7 @@ describe('empty spec', () => {
     //cy.wait(500)
     //cy.go('back')
   })
+*/
 
   it('5-5. class insert(강의 공개)', () => {
     //프로그램 이동
