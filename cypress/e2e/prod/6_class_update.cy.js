@@ -74,7 +74,7 @@ describe('empty spec', () => {
     cy.get(':nth-child(1) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
 
-    //cy.get('.mt30 > .close-button').click({force: true})
+    cy.get('.mt30 > .close-button').click({force: true})
 
     //클래스 관리 이동
     cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
@@ -167,7 +167,7 @@ describe('empty spec', () => {
     cy.get(':nth-child(1) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
 
-    //cy.get('.mt30 > .close-button').click({force: true})
+    cy.get('.mt30 > .close-button').click({force: true})
 
     cy.on('uncaught:exception', (err, runnable) => {
       expect(err.message).to.include('something about the error')
@@ -181,7 +181,7 @@ describe('empty spec', () => {
       // failing this test
       return false
     })
-    
+
     //클래스 관리 이동
    cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
     cy.wait(500)
@@ -284,10 +284,23 @@ describe('empty spec', () => {
     cy.get(':nth-child(1) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
 
-    //cy.get('.mt30 > .close-button').click({force: true})
+    cy.get('.mt30 > .close-button').click({force: true})
+
+    cy.on('uncaught:exception', (err, runnable) => {
+      expect(err.message).to.include('something about the error')
+  
+      // using mocha's async done callback to finish
+      // this test so we prove that an uncaught exception
+      // was thrown
+      done()
+  
+      // return false to prevent the error from
+      // failing this test
+      return false
+    })
 
     //클래스 관리 이동
-   cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
+    cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
     cy.wait(500)
     
     //결제 설정
@@ -345,8 +358,21 @@ describe('empty spec', () => {
     }
     cy.wait(2000)
 
+    cy.on('uncaught:exception', (err, runnable) => {
+      expect(err.message).to.include('something about the error')
+  
+      // using mocha's async done callback to finish
+      // this test so we prove that an uncaught exception
+      // was thrown
+      done()
+  
+      // return false to prevent the error from
+      // failing this test
+      return false
+    })
+    
     //원복
-   cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
+    cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
     cy.wait(500)
 
     cy.get('.lk-tabs > :nth-child(4) > span').click()
@@ -373,7 +399,7 @@ describe('empty spec', () => {
     cy.get(':nth-child(1) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
 
-    //cy.get('.mt30 > .close-button').click({force: true})
+    cy.get('.mt30 > .close-button').click({force: true})
 
     //클래스 관리 이동
    cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
@@ -479,7 +505,7 @@ describe('empty spec', () => {
     cy.get(':nth-child(1) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
     
-    //cy.get('.mt30 > .close-button').click({force: true})
+    cy.get('.mt30 > .close-button').click({force: true})
 
     //클래스 관리 이동
    cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
@@ -553,7 +579,7 @@ describe('empty spec', () => {
     cy.get(':nth-child(1) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
 
-    //cy.get('.mt30 > .close-button').click({force: true})
+    cy.get('.mt30 > .close-button').click({force: true})
 
     //클래스 관리 이동
    cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
@@ -617,7 +643,7 @@ describe('empty spec', () => {
     cy.get(':nth-child(2) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
     
-    //cy.get('.mt30 > .close-button').click({force: true})
+    cy.get('.mt30 > .close-button').click({force: true})
 
     cy.on('uncaught:exception', (err, runnable) => {
       expect(err.message).to.include('something about the error')

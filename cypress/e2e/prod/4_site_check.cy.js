@@ -17,7 +17,7 @@ describe('empty spec', () => {
     cy.wait(300)
     cy.visit('https://testlee001.liveklass.com/')
     cy.wait(300)
-    
+
     //cy.get('.lk-select', 2).select('한국어');
     //cy.autoheal();
     //cy.get('.lk-select').select('영어');
@@ -29,12 +29,12 @@ describe('empty spec', () => {
       cy.get(':nth-child(1) > .header-menu-item-btn').contains('소개').should('exist') 
       cy.get(':nth-child(2) > .header-menu-item-btn').contains('프로그램').should('exist') 
       cy.get(':nth-child(3) > .header-menu-item-btn').contains('공지사항').should('exist') 
-      cy.get(':nth-child(4) > .header-menu-item-btn').contains('나의 강의실').should('exist')
+      //cy.get(':nth-child(4) > .header-menu-item-btn').contains('나의 강의실').should('exist')
     }else{
       cy.get(':nth-child(1) > .header-menu-item-btn').contains('소개').should('exist') 
       cy.get(':nth-child(2) > .header-menu-item-btn').contains('프로그램').should('exist') 
       cy.get(':nth-child(3) > .header-menu-item-btn').contains('공지사항').should('exist') 
-      cy.get(':nth-child(4) > .header-menu-item-btn').contains('나의 강의실').should('exist')
+      //cy.get(':nth-child(4) > .header-menu-item-btn').contains('나의 강의실').should('exist')
     }
     cy.get(':nth-child(1) > .header-menu-item-btn').click()
     cy.wait(300)

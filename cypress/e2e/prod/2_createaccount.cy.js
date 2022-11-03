@@ -84,7 +84,7 @@ describe('empty spec', () => {
   })
 
   it('2-5. createaccount failse(no checkbox)', () => {
-    cy.get('#id').type('ruoghks@gmail.com')
+    cy.get('#id').type('cekajif719@yubua.com')
     cy.get(':nth-child(5) > .lk-input > .lk-input-inner > input').type('@dl29240730')
     cy.get(':nth-child(4) > .lk-input > .lk-input-inner > input').type('이경환')
 
