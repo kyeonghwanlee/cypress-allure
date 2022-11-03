@@ -17,6 +17,11 @@ describe('empty spec', () => {
     cy.wait(300)
     cy.visit('https://testlee001.liveklass.com/')
     cy.wait(300)
+    
+    //cy.get('.lk-select', 2).select('한국어');
+    //cy.autoheal();
+    //cy.get('.lk-select').select('영어');
+    //cy.wait(10000)
   })
 
   it('4-1. site check', () => {
