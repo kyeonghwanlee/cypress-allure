@@ -21,7 +21,7 @@ describe('empty spec', () => {
     cy.wait(500)
   })
 
-  it('5-1. class insert(강의 라이브 생성))', () => {
+  it.only('5-1. class insert(강의 라이브 생성))', () => {
     //프로그램 이동
     cy.get(':nth-child(2) > .header-menu-item-btn').click()
     cy.wait(100)
@@ -37,10 +37,10 @@ describe('empty spec', () => {
     //cy.get('[data-testid="-input"]').clear()
     cy.get('[data-testid="-input"]').type('cypress insert test', {force: true})
 
-    cy.get('.class-section > :nth-child(1) > .lk-radio-group > :nth-child(2) > span').click()
-    cy.get('.class-section > :nth-child(1) > .lk-radio-group > :nth-child(3) > span').click()
-    cy.get('.lk-radio-group > :nth-child(4) > span').click()
-    cy.get('.lk-radio-group > :nth-child(1) > span').click()
+    //cy.get('.class-section > :nth-child(1) > .lk-radio-group > :nth-child(2) > span').click()
+    //cy.get('.class-section > :nth-child(1) > .lk-radio-group > :nth-child(3) > span').click()
+    //cy.get('.lk-radio-group > :nth-child(4) > span').click()
+    //cy.get('.lk-radio-group > :nth-child(1) > span').click()
 
     //날짜 조정??
     //cy.get(':nth-child(1) > .el-date-editor > .el-input__inner').click()
