@@ -113,7 +113,7 @@ describe('empty spec', () => {
     cy.get('.swiper-slide-next > a').click()
     cy.wait(500)
 
-    cy.get('.mt30 > .close-button').click({force: true})
+    //cy.get('.mt30 > .close-button').click({force: true})
 
     //클래스 이동
     cy.contains('cypress insert test').click({force: true})
