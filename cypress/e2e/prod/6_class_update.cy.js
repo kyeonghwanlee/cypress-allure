@@ -169,6 +169,19 @@ describe('empty spec', () => {
 
     //cy.get('.mt30 > .close-button').click({force: true})
 
+    cy.on('uncaught:exception', (err, runnable) => {
+      expect(err.message).to.include('something about the error')
+  
+      // using mocha's async done callback to finish
+      // this test so we prove that an uncaught exception
+      // was thrown
+      done()
+  
+      // return false to prevent the error from
+      // failing this test
+      return false
+    })
+    
     //클래스 관리 이동
    cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
     cy.wait(500)
@@ -606,8 +619,21 @@ describe('empty spec', () => {
     
     //cy.get('.mt30 > .close-button').click({force: true})
 
+    cy.on('uncaught:exception', (err, runnable) => {
+      expect(err.message).to.include('something about the error')
+  
+      // using mocha's async done callback to finish
+      // this test so we prove that an uncaught exception
+      // was thrown
+      done()
+  
+      // return false to prevent the error from
+      // failing this test
+      return false
+    })
+
     //클래스 관리
-   cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
+    cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
     cy.wait(500)
 
     cy.get('.lk-tabs > :nth-child(2) > span').click()
