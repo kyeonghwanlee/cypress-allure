@@ -41,7 +41,7 @@ describe('empty spec', () => {
       cy.get(':nth-child(1) > .header-menu-item-btn').contains('소개').should('exist')
       cy.get(':nth-child(2) > .header-menu-item-btn').contains('프로그램').should('exist')
       cy.get(':nth-child(3) > .header-menu-item-btn').contains('공지사항').should('exist')
-      cy.get(':nth-child(4) > .header-menu-item-btn').contains('나의 강의실').should('exist')
+      //cy.get(':nth-child(4) > .header-menu-item-btn').contains('나의 강의실').should('exist')
       cy.get('.el-tooltip > span').contains('사이트 관리').should('exist')
       cy.get('.detail-btns > .btn-label > span').contains('찜하기').should('exist')
       cy.get('.share-btns > .btn-label > span').contains('공유').should('exist')
@@ -54,7 +54,7 @@ describe('empty spec', () => {
       cy.get(':nth-child(1) > .header-menu-item-btn').contains('소개').should('exist')
       cy.get(':nth-child(2) > .header-menu-item-btn').contains('프로그램').should('exist')
       cy.get(':nth-child(3) > .header-menu-item-btn').contains('공지사항').should('exist')
-      cy.get(':nth-child(4) > .header-menu-item-btn').contains('나의 강의실').should('exist')
+      //cy.get(':nth-child(4) > .header-menu-item-btn').contains('나의 강의실').should('exist')
       cy.get('.el-tooltip > span').contains('사이트 관리').should('exist')
       cy.get('.detail-btns > .btn-label > span').contains('Like').should('exist')
       cy.get('.share-btns > .btn-label > span').contains('Share').should('exist')
@@ -77,7 +77,8 @@ describe('empty spec', () => {
     //cy.get('.mt30 > .close-button').click({force: true})
 
     //클래스 관리 이동
-    cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
+    //cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
+    cy.get('.small>div>span', 2).click()
     cy.wait(500)
     
     //check
@@ -183,7 +184,8 @@ describe('empty spec', () => {
     })
 
     //클래스 관리 이동
-   cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
+   //cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
+    cy.get('.small>div>span', 2).click()
     cy.wait(500)
 
     //클래스 설정
@@ -257,7 +259,8 @@ describe('empty spec', () => {
     }
     cy.wait(500)
     //원복
-   cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
+   //cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
+   cy.get('.small>div>span', 2).click()
     cy.wait(500)
     cy.get('.lk-tabs > :nth-child(2) > span').click()
     cy.wait(500)
@@ -300,7 +303,8 @@ describe('empty spec', () => {
     })
 
     //클래스 관리 이동
-    cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
+    //cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
+    cy.get('.small>div>span', 2).click()
     cy.wait(500)
     
     //결제 설정
@@ -372,7 +376,8 @@ describe('empty spec', () => {
     })
 
     //원복
-    cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
+    //cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
+    cy.get('.small>div>span', 2).click()
     cy.wait(500)
 
     cy.get('.lk-tabs > :nth-child(4) > span').click()
@@ -402,7 +407,8 @@ describe('empty spec', () => {
     ////cy.get('.mt30 > .close-button').click({force: true})
 
     //클래스 관리 이동
-   cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
+   //cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()\
+   cy.get('.small>div>span', 2).click()
     cy.wait(500)
     
     //추가정보
@@ -485,7 +491,8 @@ describe('empty spec', () => {
     cy.wait(500)
 
     //클래스 관리 이동
-   cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
+   //cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
+   cy.get('.small>div>span', 2).click()
     cy.wait(500)
     
     //추가정보
@@ -508,7 +515,8 @@ describe('empty spec', () => {
     ////cy.get('.mt30 > .close-button').click({force: true})
 
     //클래스 관리 이동
-   cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
+   //cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
+   cy.get('.small>div>span', 2).click()
     cy.wait(500)
     
     //강의관리
@@ -582,7 +590,8 @@ describe('empty spec', () => {
     ////cy.get('.mt30 > .close-button').click({force: true})
 
     //클래스 관리 이동
-   cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
+   //cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
+   cy.get('.small>div>span', 2).click()
     cy.wait(500)
     
     //강의관리
@@ -659,7 +668,8 @@ describe('empty spec', () => {
     })
 
     //클래스 관리
-    cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
+    //cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
+    cy.get('.small>div>span', 2).click()
     cy.wait(500)
 
     cy.get('.lk-tabs > :nth-child(2) > span').click()
