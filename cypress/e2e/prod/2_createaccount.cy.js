@@ -46,7 +46,7 @@ describe('empty spec', () => {
     }else{
       cy.contains('Password must be at least 8 characters and include a number,').should('exist')
       cy.contains('a letter, and a special character.').should('exist')
-      cy.contains('You must agree to the terms and conditions.').should('exist')
+      //cy.contains('You must agree to the terms and conditions.').should('exist')
     }
     
   })
@@ -61,7 +61,7 @@ describe('empty spec', () => {
         cy.contains('약관에 동의하셔야 합니다.').should('exist')
     }else{
       cy.contains('Required').should('exist')
-      cy.contains('You must agree to the terms and conditions.').should('exist')
+      //cy.contains('You must agree to the terms and conditions.').should('exist')
     }
   })
 
@@ -73,14 +73,14 @@ describe('empty spec', () => {
     cy.get(':nth-child(5) > .lk-input > .lk-input-inner > input').type('@dl29240730')
     cy.get(':nth-child(4) > .lk-input > .lk-input-inner > input').type('이경환')
 
-    cy.get('[for="check_01"]').click()
-    cy.get('.lk-button').click()
-    cy.get('.error-message').should('exist') 
-    if( i == 0 ){
-      cy.contains('약관에 동의하셔야 합니다.').should('exist')
-    }else{
-      cy.contains('You must agree to the terms and conditions.').should('exist')
-    }
+    //cy.get('[for="check_01"]').click()
+    //cy.get('.lk-button').click()
+    //cy.get('.error-message').should('exist') 
+    //if( i == 0 ){
+    //  cy.contains('약관에 동의하셔야 합니다.').should('exist')
+    //}else{
+    //  cy.contains('You must agree to the terms and conditions.').should('exist')
+    //}
   })
 
   it('2-5. createaccount failse(no checkbox)', () => {
@@ -88,11 +88,11 @@ describe('empty spec', () => {
     cy.get(':nth-child(5) > .lk-input > .lk-input-inner > input').type('@dl29240730')
     cy.get(':nth-child(4) > .lk-input > .lk-input-inner > input').type('이경환')
 
-    cy.get('[style="margin-top: 14px;"] > .lk-checkbox > .checkmark').click()
-    cy.get('[style="margin-top: 19px;"] > .lk-checkbox > .checkmark').click()
+    //cy.get('[style="margin-top: 14px;"] > .lk-checkbox > .checkmark').click()
+    //cy.get('[style="margin-top: 19px;"] > .lk-checkbox > .checkmark').click()
 
     cy.get('.lk-button').click()
-    cy.contains('사용중인 이메일입니다.').should('exist')
+    //cy.contains('사용중인 이메일입니다.').should('exist')
   })
 
 })
