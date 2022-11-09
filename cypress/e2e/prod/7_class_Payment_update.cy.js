@@ -447,38 +447,6 @@ describe('empty spec', () => {
         //cy.get('.mt30 > .close-button').click({force: true})
 
         //클래스 관리
-// 수강 취소
-cy.get(':nth-child(2) > .header-menu-item-btn').click()
-cy.wait(500)
-
-cy.get(':nth-child(2) > .lk-card-img > .lk-card-link').click()
-cy.wait(500)
-
-//cy.get('.mt30 > .close-button').click({force: true})
-
-//클래스 관리
-cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').click()
-cy.wait(500)
-
-cy.get('.search-item>label>.checkmark', 2).click()
-cy.wait(500)
-cy.get('(//*[contains(@class,"el-select__caret")])[1]', 3).click()
-cy.wait(500)
-cy.get('//ul/*[normalize-space(.)="수강 취소"]', 4).click()
-cy.wait(500)
-cy.get('.search-item>button:nth-child(3)', 5).click()
-cy.wait(500)
-cy.get('(//*[contains(text(),"확인")])[2]', 6).click()
-cy.wait(500)// 수강 취소
-        cy.get(':nth-child(2) > .header-menu-item-btn').click()
-        cy.wait(500)
-
-        cy.get(':nth-child(2) > .lk-card-img > .lk-card-link').click()
-        cy.wait(500)
-        
-        //cy.get('.mt30 > .close-button').click({force: true})
-
-        //클래스 관리
         cy.get('.row > #view-step2 > .cv-edit-btn > .btn-label > span').click()
         cy.wait(500)
         cy.get('.attendee-list-body > .search-top-container > .search-item > .lk-checkbox > .checkmark').click()
