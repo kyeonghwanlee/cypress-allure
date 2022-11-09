@@ -4,7 +4,7 @@ describe('empty spec', () => {
   
   beforeEach(function () {
     cy.viewport(1920,1080)
-    cy.visit('https://sso.liveklass.com/login')
+    cy.visit('https://dev-liveklass.net/login')
 
      // id & pw text input
      cy.get('.form_group > .lk-input > .lk-input-inner > input').type('pogap61665@otodir.com')
@@ -29,14 +29,12 @@ describe('empty spec', () => {
       cy.contains('마이 페이지').should('exist') 
       cy.contains('승인 대기중인 클래스').should('exist') 
       cy.contains('내가 찜한 클래스').should('exist') 
-      //cy.contains('완료한 클래스').should('exist') 
     }else{
       cy.contains('Sites').should('exist') 
       cy.contains('Courses').should('exist') 
       cy.contains('마이 페이지').should('exist') 
       cy.contains('Enrolled classes').should('exist') 
-      cy.contains('Liked Classes').should('exist') 
-      //cy.contains('Completed classes').should('exist') 
+      cy.contains('Liked Classes').should('exist')
     }
 
     // user stting button check
@@ -64,7 +62,7 @@ describe('empty spec', () => {
   })
 
   it('3-1. editinformation page check', () => {
-    cy.visit('https://sso.liveklass.com/editinformation')
+    cy.visit('https://dev-liveklass.net/editinformation')
     cy.wait(500)
     //phone chage
     
@@ -72,7 +70,7 @@ describe('empty spec', () => {
       cy.contains('내 정보 수정').should('exist')
       cy.contains('신청 내역').should('exist')
       cy.contains('업로드').should('exist')
-      cy.contains('메일 인증 하기').should('exist')
+      //cy.contains('메일 인증 하기').should('exist')
       cy.contains('프로필 사진').should('exist')
       cy.contains('이름').should('exist')
       cy.contains('이메일').should('exist')
@@ -86,7 +84,7 @@ describe('empty spec', () => {
       cy.contains('Edit My Information').should('exist')
       cy.contains('Class application history').should('exist')
       cy.contains('Upload').should('exist')
-      cy.contains('메일 인증 하기').should('exist')
+      //cy.contains('메일 인증 하기').should('exist')
       cy.contains('Profile Photo').should('exist')
       cy.contains('Name').should('exist')
       cy.contains('Email').should('exist')
@@ -168,7 +166,7 @@ describe('empty spec', () => {
   })
 
   it('3-2. editinformation email check', () => {
-    cy.visit('https://sso.liveklass.com/editinformation')
+    cy.visit('https://dev-liveklass.net/editinformation')
     cy.wait(200)
 
     cy.get('.content_td > div > .btn_common').click()

@@ -4,7 +4,7 @@ describe('empty spec', () => {
 
   beforeEach(function () {
     cy.viewport(1920,1080)
-    cy.visit('https://sso.liveklass.com/login')
+    cy.visit('https://dev-liveklass.net/login')
 
     // id & pw text input
     cy.get('[type="text"]').clear()
@@ -15,7 +15,7 @@ describe('empty spec', () => {
     // login button click
     cy.get('.lk-button').click()
     cy.wait(300)
-    cy.visit('https://testlee001.liveklass.com/')
+    cy.visit('https://testlee001-staging.staging-liveklass.net/')
     cy.wait(300)
 
     //cy.get('.lk-select', 2).select('한국어');
@@ -158,8 +158,8 @@ describe('empty spec', () => {
       cy.contains('구독료').should('exist') 
       cy.contains('합계').should('exist') 
       cy.contains('결제금액').should('exist') 
-      //cy.contains('현재 사용중인 플랜보다 더 많은 수강 신청을 받을 수 있어요.').should('exist')
-      //cy.contains('300GB 만큼 더 사용할 수 있고, 결제 수수료는 5% 로 이용할 수 있어요.').should('exist')
+      cy.contains('현재 사용중인 플랜보다 더 많은 수강 신청을 받을 수 있어요.').should('exist')
+      cy.contains('300GB 만큼 더 사용할 수 있고, 결제 수수료는 5% 로 이용할 수 있어요.').should('exist')
     }else{
       cy.contains('구독 취소(A)').should('exist') 
       cy.contains('환불').should('exist') 

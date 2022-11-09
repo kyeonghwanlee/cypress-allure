@@ -4,7 +4,7 @@ describe('empty spec', () => {
 
   beforeEach(function () {
     cy.viewport(1920,1080)
-    cy.visit('https://testlee001.liveklass.com/')
+    cy.visit('https://testlee001-staging.staging-liveklass.net/')
     cy.wait(500)
 
     cy.get('.header-action > .outlined > span').click()
@@ -74,7 +74,7 @@ describe('empty spec', () => {
     cy.get(':nth-child(1) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
 
-    cy.get('.mt30 > .close-button').click({force: true})
+    //cy.get('.mt30 > .close-button').click({force: true})
 
     //클래스 관리 이동
     cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
@@ -168,7 +168,7 @@ describe('empty spec', () => {
     cy.get(':nth-child(1) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
 
-    cy.get('.mt30 > .close-button').click({force: true})
+    //cy.get('.mt30 > .close-button').click({force: true})
 
     cy.on('uncaught:exception', (err, runnable) => {
       expect(err.message).to.include('something about the error')
@@ -200,7 +200,7 @@ describe('empty spec', () => {
       cy.get(':nth-child(1) > :nth-child(1) > .chk-label').contains('모집 정원').should('exist')
       cy.get(':nth-child(2) > .checks > .chk-label').contains('운영자 선정').should('exist')
       cy.get('.row-inner-white > :nth-child(3) > .checks > .chk-label').contains('모집 기간').should('exist')
-      cy.get(':nth-child(4) > .row-inner-item-label').contains('수강 기간').should('exist')
+      cy.get(':nth-child(4) > .row-inner-item-label').contains('수강기간').should('exist')
       cy.get(':nth-child(5) > .row-inner-item-label').contains('카테고리').should('exist')
       cy.get('.btn-submit > .btn-label > span').contains('변경사항 저장하기').should('exist')
     }else{
@@ -210,7 +210,7 @@ describe('empty spec', () => {
       cy.get(':nth-child(1) > :nth-child(1) > .chk-label').contains('모집 정원').should('exist')
       cy.get(':nth-child(2) > .checks > .chk-label').contains('운영자 선정').should('exist')
       cy.get('.row-inner-white > :nth-child(3) > .checks > .chk-label').contains('모집 기간').should('exist')
-      cy.get(':nth-child(4) > .row-inner-item-label').contains('수강 기간').should('exist')
+      cy.get(':nth-child(4) > .row-inner-item-label').contains('수강기간').should('exist')
       cy.get(':nth-child(5) > .row-inner-item-label').contains('카테고리').should('exist')
       cy.get('.btn-submit > .btn-label > span').contains('변경사항 저장하기').should('exist')
     }
@@ -225,13 +225,13 @@ describe('empty spec', () => {
     cy.get(':nth-child(2) > .lk-textarea > .ui-textarea').clear()
     cy.get(':nth-child(3) > .lk-textarea > .ui-textarea').clear()
     cy.get(':nth-child(4) > .lk-textarea > .ui-textarea').clear()
-    cy.get(':nth-child(7) > .editor-style > .fr-box > .fr-wrapper > .fr-element').clear()
+    cy.get(':nth-child(7) > .lk-textarea > .ui-textarea').clear()
     cy.wait(500)
     cy.get(':nth-child(1) > .lk-textarea > .ui-textarea').type('cypress update test')
     cy.get(':nth-child(2) > .lk-textarea > .ui-textarea').type('cypress update test')
     cy.get(':nth-child(3) > .lk-textarea > .ui-textarea').type('cypress update test')
     cy.get(':nth-child(4) > .lk-textarea > .ui-textarea').type('cypress update test')
-    cy.get(':nth-child(7) > .editor-style > .fr-box > .fr-wrapper > .fr-element').type('cypress update test')
+    cy.get(':nth-child(7) > .lk-textarea > .ui-textarea').type('cypress update test')
     cy.wait(500)
 
     //모집정원
@@ -240,12 +240,7 @@ describe('empty spec', () => {
     cy.get(':nth-child(1) > :nth-child(3) > .checks > .checkmark').click()
     //cy.get(':nth-child(2) > .checks > .checkmark').click()
     cy.get(':nth-child(4) > .el-select > .el-input > .el-input__inner').click()
-    
-    if( i == 0 ){
-      cy.contains('30일').click()
-    }else{
-      cy.contains('30 days').click()
-    }
+    cy.contains('30 days').click()
     cy.wait(500)
 
     cy.contains('변경사항 저장하기').click()
@@ -293,7 +288,7 @@ describe('empty spec', () => {
     cy.get(':nth-child(1) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
 
-    cy.get('.mt30 > .close-button').click({force: true})
+    //cy.get('.mt30 > .close-button').click({force: true})
 
     cy.on('uncaught:exception', (err, runnable) => {
       expect(err.message).to.include('something about the error')
@@ -410,7 +405,7 @@ describe('empty spec', () => {
     cy.get(':nth-child(1) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
 
-    cy.get('.mt30 > .close-button').click({force: true})
+    ////cy.get('.mt30 > .close-button').click({force: true})
 
     //클래스 관리 이동
     cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
@@ -465,10 +460,10 @@ describe('empty spec', () => {
     cy.wait(500)
 
     if( i == 0 ){
-      cy.contains('추가정보 입력').should('exist')
+      cy.contains('(필수) 추가정보 입력').should('exist')
     }else{
       cy.contains('Enter additional').should('exist')
-      //cy.contains('information').should('exist')
+      cy.contains('information').should('exist')
     }
     //============================================================ 
     //원복
@@ -518,7 +513,7 @@ describe('empty spec', () => {
     cy.get(':nth-child(1) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
     
-    cy.get('.mt30 > .close-button').click({force: true})
+    ////cy.get('.mt30 > .close-button').click({force: true})
 
     //클래스 관리 이동
     cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
@@ -593,7 +588,7 @@ describe('empty spec', () => {
     cy.get(':nth-child(1) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
 
-    cy.get('.mt30 > .close-button').click({force: true})
+    ////cy.get('.mt30 > .close-button').click({force: true})
 
     //클래스 관리 이동
     cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
@@ -658,7 +653,7 @@ describe('empty spec', () => {
     cy.get(':nth-child(2) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
     
-    cy.get('.mt30 > .close-button').click({force: true})
+    ////cy.get('.mt30 > .close-button').click({force: true})
 
     cy.on('uncaught:exception', (err, runnable) => {
       expect(err.message).to.include('something about the error')

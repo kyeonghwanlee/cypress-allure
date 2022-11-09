@@ -4,7 +4,7 @@ describe('empty spec', () => {
 
   beforeEach(function () {
     cy.viewport(1920,1080)
-    cy.visit('https://sso.liveklass.com/createaccount')
+    cy.visit('https://dev-liveklass.net/createaccount')
 
     cy.get('.email').click()
   })
@@ -69,7 +69,7 @@ describe('empty spec', () => {
     // email text input false
     cy.get('.error-message').should('not.exist')
 
-    cy.get('#id').type('ruoghks@gmail.com')
+    cy.get('#id').type('pogap61665@otodir.com')
     cy.get(':nth-child(5) > .lk-input > .lk-input-inner > input').type('@dl29240730')
     cy.get(':nth-child(4) > .lk-input > .lk-input-inner > input').type('이경환')
 
@@ -84,16 +84,40 @@ describe('empty spec', () => {
   })
 
   it('2-5. createaccount failse(no checkbox)', () => {
-    cy.get('#id').type('cekajif719@yubua.com')
+    cy.get('#id').type('pogap61665@otodir.com')
     cy.get(':nth-child(5) > .lk-input > .lk-input-inner > input').type('@dl29240730')
     cy.get(':nth-child(4) > .lk-input > .lk-input-inner > input').type('이경환')
 
     //cy.get('[style="margin-top: 14px;"] > .lk-checkbox > .checkmark').click()
     //cy.get('[style="margin-top: 19px;"] > .lk-checkbox > .checkmark').click()
 
+    
     cy.get('.lk-button').click()
     cy.contains('사용중인 이메일입니다.').should('exist')
-    cy.get('.lk-mng-button').click()
+    
+    /* 
+    // 가입 진행 중일 떄 아래 문구 코딩 사용
+    cy.contains('회원가입').should('exist')
+    cy.contains('이메일').should('exist')
+    cy.contains('이름').should('exist')
+    cy.contains('이경환').should('exist')
+    cy.contains('pogap61665@otodir.com').should('exist')
+    cy.contains('약관 동의').should('exist')
+    cy.contains('전체 동의').should('exist')
+
+    cy.get('.text-left > div').click()
+
+    cy.contains('만 14세 이상 이용, 서비스 이용약관, 개인정보 수집 및 이용 동의').should('exist')
+    cy.contains('서비스 이용약관 동의').should('exist')
+    cy.contains('개인정보 수집 및 이용 동의').should('exist')
+    cy.contains('마케팅 정보 수신 동의').should('exist')
+
+    cy.contains('동의하고 가입하기').should('exist')
+
+    cy.get('.checkmark').click()
+
+    cy.get('.lk-btn').click()
+    */
   })
 
 })
