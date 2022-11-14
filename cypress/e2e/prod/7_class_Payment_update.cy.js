@@ -28,10 +28,11 @@ describe('empty spec', () => {
         cy.get(':nth-child(2) > .lk-card-img > .lk-card-link').click()
         cy.wait(500)
 
-        //cy.get('.mt30 > .close-button').click({force: true})
-
         //클래스 관리
         cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').click()
+        cy.wait(500)
+
+        cy.get('.mt30 > .close-button').click({force: true})
         cy.wait(500)
 
         cy.get('.lk-tabs > :nth-child(4) > span').click()
@@ -78,10 +79,11 @@ describe('empty spec', () => {
         cy.get(':nth-child(2) > .lk-card-img > .lk-card-link').click()
         cy.wait(500)
 
-        //cy.get('.mt30 > .close-button').click({force: true})
-
         //클래스 관리
         cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').click()
+        cy.wait(500)
+
+        cy.get('.mt30 > .close-button').click({force: true})
         cy.wait(500)
 
         //결제 설정
@@ -133,10 +135,11 @@ describe('empty spec', () => {
         cy.get(':nth-child(2) > .lk-card-img > .lk-card-link').click()
         cy.wait(500)
         
-        //cy.get('.mt30 > .close-button').click({force: true})
-
         //클래스 관리
         cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').click()
+        cy.wait(500)
+
+        cy.get('.mt30 > .close-button').click({force: true})
         cy.wait(500)
 
         //결제 설정
@@ -175,11 +178,12 @@ describe('empty spec', () => {
 
         cy.get(':nth-child(2) > .lk-card-img > .lk-card-link').click()
         cy.wait(500)
-        
-        //cy.get('.mt30 > .close-button').click({force: true})
 
         //클래스 관리
         cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').click()
+        cy.wait(500)
+        
+        cy.get('.mt30 > .close-button').click({force: true})
         cy.wait(500)
 
         cy.get('.lk-tabs > :nth-child(2) > span').click()
@@ -239,8 +243,9 @@ describe('empty spec', () => {
             cy.log(gan)
         })
         cy.wait(500)
-        
-        //cy.get('.mt30 > .close-button').click({force: true})
+
+        cy.get('.mt30 > .close-button').click({force: true})
+        cy.wait(500)
 
         //로그아웃
         cy.get('.ki-user').click()
@@ -329,7 +334,8 @@ describe('empty spec', () => {
         cy.get(':nth-child(2) > .lk-card-img > .lk-card-link').click()
         cy.wait(500)
         
-        //cy.get('.mt30 > .close-button').click({force: true})
+        cy.get('.mt30 > .close-button').click({force: true})
+        cy.wait(500)
 
         //클래스 관리
         cy.get('.row > #view-step2 > .cv-edit-btn > .btn-label > span').click()
@@ -361,7 +367,8 @@ describe('empty spec', () => {
         })
         cy.wait(500)
         
-        //cy.get('.mt30 > .close-button').click({force: true})
+        cy.get('.mt30 > .close-button').click({force: true})
+        cy.wait(500)
 
         //로그아웃
         cy.get('.ki-user').click()
@@ -444,7 +451,8 @@ describe('empty spec', () => {
         cy.get(':nth-child(2) > .lk-card-img > .lk-card-link').click()
         cy.wait(500)
         
-        //cy.get('.mt30 > .close-button').click({force: true})
+        cy.get('.mt30 > .close-button').click({force: true})
+        cy.wait(500)
 
         //클래스 관리
         cy.get('.row > #view-step2 > .cv-edit-btn > .btn-label > span').click()
@@ -471,12 +479,13 @@ describe('empty spec', () => {
         cy.get(':nth-child(2) > .lk-card-img > .lk-card-link').click()
         cy.wait(500)
         
-        //cy.get('.mt30 > .close-button').click({force: true})
-
         //클래스 관리
         cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').click()
         cy.wait(500)
 
+        cy.get('.mt30 > .close-button').click({force: true})
+        cy.wait(500)
+        
         cy.get('.lk-tabs > :nth-child(2) > span').click()
         cy.wait(500)
 
