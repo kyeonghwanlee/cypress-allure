@@ -92,7 +92,7 @@ describe('empty spec', () => {
     //cy.get('[style="margin-top: 19px;"] > .lk-checkbox > .checkmark').click()
 
     cy.get('.lk-button').click()
-    cy.contains('사용중인 이메일입니다.').should('exist')
+    cy.contains('This ID has').should('exist')
     cy.get('.lk-mng-button').click()
   })
 

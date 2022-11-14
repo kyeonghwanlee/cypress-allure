@@ -74,7 +74,7 @@ describe('empty spec', () => {
     cy.get(':nth-child(1) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
 
-    cy.get('.mt30 > .close-button').click({force: true})
+    //cy.get('.mt30 > .close-button').click({force: true})
 
     //클래스 관리 이동
     cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
@@ -168,7 +168,7 @@ describe('empty spec', () => {
     cy.get(':nth-child(1) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
 
-    cy.get('.mt30 > .close-button').click({force: true})
+    //cy.get('.mt30 > .close-button').click({force: true})
 
     cy.on('uncaught:exception', (err, runnable) => {
       expect(err.message).to.include('something about the error')
@@ -293,7 +293,7 @@ describe('empty spec', () => {
     cy.get(':nth-child(1) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
 
-    cy.get('.mt30 > .close-button').click({force: true})
+    //cy.get('.mt30 > .close-button').click({force: true})
 
     cy.on('uncaught:exception', (err, runnable) => {
       expect(err.message).to.include('something about the error')
@@ -410,7 +410,7 @@ describe('empty spec', () => {
     cy.get(':nth-child(1) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
 
-    cy.get('.mt30 > .close-button').click({force: true})
+    //cy.get('.mt30 > .close-button').click({force: true})
 
     //클래스 관리 이동
     cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
@@ -518,7 +518,7 @@ describe('empty spec', () => {
     cy.get(':nth-child(1) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
     
-    cy.get('.mt30 > .close-button').click({force: true})
+    //cy.get('.mt30 > .close-button').click({force: true})
 
     //클래스 관리 이동
     cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
@@ -593,7 +593,7 @@ describe('empty spec', () => {
     cy.get(':nth-child(1) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
 
-    cy.get('.mt30 > .close-button').click({force: true})
+    //cy.get('.mt30 > .close-button').click({force: true})
 
     //클래스 관리 이동
     cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
@@ -658,7 +658,7 @@ describe('empty spec', () => {
     cy.get(':nth-child(2) > .lk-card-img > .lk-card-link').click()
     cy.wait(500)
     
-    cy.get('.mt30 > .close-button').click({force: true})
+    //cy.get('.mt30 > .close-button').click({force: true})
 
     cy.on('uncaught:exception', (err, runnable) => {
       expect(err.message).to.include('something about the error')
