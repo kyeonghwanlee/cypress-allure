@@ -77,7 +77,7 @@ describe('empty spec', () => {
   it('1-4. Login should mypage login & logout', () => {
     // id & pw text input
     cy.get('[type="text"]').type('kyeonghwan.lee@liveklass.com')
-    cy.get('[type="password"]').type('@dl29240730')
+    cy.get('[type="password"]').type('@Dl292407')
 
     // login button click
     cy.get('.lk-button').click()
