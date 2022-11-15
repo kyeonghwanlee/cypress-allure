@@ -92,8 +92,8 @@ describe('empty spec', () => {
 
         cy.get('[id="fareCd"]').then(data=> {
             if( data.val() == '00' ){
-                cy.get(':nth-child(1) > :nth-child(1) > .checkmark').click()
-                cy.get(':nth-child(1) > :nth-child(2) > [style="display: flex;"] > .lk-input-container > .container-input').type('10000')
+                cy.get('.class-manage-wrapper > :nth-child(1) > :nth-child(1) > .checkmark').click()
+                cy.get(':nth-child(1) > .row-inner > :nth-child(3) > [style="display: flex;"] > .lk-input-container > .container-input').type('10000')
                 cy.get('.btn-submit > .btn-label > span').click()
                 cy.wait(500)
             }else{
@@ -148,8 +148,8 @@ describe('empty spec', () => {
 
         cy.get('[id="fareCd"]').then(data=> {
             if( data.val() == '00' ){
-                cy.get(':nth-child(1) > :nth-child(1) > .checkmark').click()
-                cy.get(':nth-child(1) > :nth-child(2) > [style="display: flex;"] > .lk-input-container > .container-input').type('10000')
+                cy.get('.class-manage-wrapper > :nth-child(1) > :nth-child(1) > .checkmark').click()
+                cy.get(':nth-child(1) > .row-inner > :nth-child(3) > [style="display: flex;"] > .lk-input-container > .container-input').type('10000')
                 cy.get('.btn-submit > .btn-label > span').click()
                 cy.wait(500)
             }else{
@@ -485,7 +485,7 @@ describe('empty spec', () => {
 
         cy.get('.mt30 > .close-button').click({force: true})
         cy.wait(500)
-        
+
         cy.get('.lk-tabs > :nth-child(2) > span').click()
         cy.wait(500)
 

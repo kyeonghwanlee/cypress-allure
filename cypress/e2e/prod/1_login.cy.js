@@ -34,12 +34,12 @@ describe('empty spec', () => {
     cy.contains('이메일 형식으로 입력해 주세요').should('exist') 
 
     // check
-    cy.contains('This user does not exist').should('not.exist')
+    cy.contains('비밀번호를 재설정할 수 있는 링크를 메일로 발송하였습니다.').should('not.exist')
     cy.get('[placeholder="이메일을 입력해주세요"]').clear()
     cy.get('[placeholder="이메일을 입력해주세요"]').type('ruoghks@gmail.com')
     cy.get('.reset-modal > .lk-button').click() 
     cy.wait(500)
-    cy.contains('This user does not exist').should('exist')
+    cy.contains('비밀번호를 재설정할 수 있는 링크를 메일로 발송하였습니다.').should('exist')
 
     // Ok button
     cy.contains('확인').click()
@@ -58,13 +58,13 @@ describe('empty spec', () => {
 
   it('1-2. Login failse(no password)', () => {
     // email text input false
-    cy.contains('가입된 이메일이 아닙니다. 입력한 내용을 다시 확인해주세요.').should('not.exist')
+    cy.contains('비밀번호가 설정 되어 있지 않습니다.').should('not.exist')
 
     cy.get('[type="text"]').type('ruoghks@gmail.com')
     cy.get('[type="password"]').type('admin')
     cy.get('.lk-button').click()
 
-    cy.contains('가입된 이메일이 아닙니다. 입력한 내용을 다시 확인해주세요.').should('exist') 
+    cy.contains('비밀번호가 설정 되어 있지 않습니다.').should('exist') 
   })
 
   it('1-3. Login failse(no email & password)', () => {

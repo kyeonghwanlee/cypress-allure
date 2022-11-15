@@ -94,7 +94,7 @@ describe('empty spec', () => {
       cy.get('.btn-email-list > .btn-label > span').contains('발송 이력 확인').should('exist')
       cy.get('.btn-invite > .btn-label > span').contains('초대하기').should('exist')
     }else{
-      cy.get('.btn-move > .btn-label > span').contains('클래스로 돌아가기').should('exist')
+      cy.get('.btn-move > .btn-label > span').contains('Back to class').should('exist')
       cy.get('[style="font-size: 16px; color: rgb(17, 42, 68); margin-right: 10px; cursor: pointer; vertical-align: bottom; font-weight: 600;"]').contains('클래스 공개').should('exist')
       cy.get('.clicked > span').contains('수강생').should('exist')
       cy.get('.lk-tabs > :nth-child(2) > span').contains('클래스 설정').should('exist')
@@ -250,7 +250,7 @@ describe('empty spec', () => {
       cy.get('.detail-wrapper > :nth-child(3)').contains('1개월 수강').should('exist')
     }else{
       cy.get('.detail-wrapper > :nth-child(1)').contains('Enrollment limit: 100').should('exist')
-      cy.get('.detail-wrapper > :nth-child(3)').contains('Class period: 1 month').should('exist')
+      //cy.get('.detail-wrapper > :nth-child(3)').contains('Class period: 1 month').should('exist')
     }
     cy.wait(500)
     //원복
@@ -283,13 +283,11 @@ describe('empty spec', () => {
     cy.wait(500)
 
     cy.get('.mt30 > .close-button').click({force: true})
+    cy.wait(500)
 
     //클래스 관리 이동
     cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
     //cy.get('.small>div>span', 2).click()
-    cy.wait(500)
-    
-    cy.get('.mt30 > .close-button').click({force: true})
     cy.wait(500)
 
     //결제 설정
@@ -647,7 +645,7 @@ describe('empty spec', () => {
 
     cy.get('.mt30 > .close-button').click({force: true})
     cy.wait(500)
-    
+
     cy.get('.lk-tabs > :nth-child(2) > span').click()
     cy.wait(500)
 

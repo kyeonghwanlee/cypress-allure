@@ -21,7 +21,7 @@ describe('empty spec', () => {
     cy.wait(500)
   })
 
-  it('5-1. class insert(강의 라이브 생성))', () => {
+  it.only('5-1. class insert(강의 라이브 생성))', () => {
     //프로그램 이동
     cy.get(':nth-child(2) > .header-menu-item-btn').click()
     cy.wait(100)
@@ -36,6 +36,8 @@ describe('empty spec', () => {
 
     //cy.get('[data-testid="-input"]').clear()
     cy.get('[data-testid="-input"]').type('cypress insert test', {force: true})
+    cy.get('.check-area > .lk-checkbox > .checkmark').click()
+    cy.get(':nth-child(4) > .lk-button > .btn-label > span').click()
 
     //cy.get('.class-section > :nth-child(1) > .lk-radio-group > :nth-child(2) > span').click()
     //cy.get('.class-section > :nth-child(1) > .lk-radio-group > :nth-child(3) > span').click()
@@ -57,7 +59,8 @@ describe('empty spec', () => {
     //cy.get(':nth-child(1) > .timepicker-custom > .vue__time-picker > .dropdown > .select-list > .hours > [data-key="14"]').click()
     //cy.get(':nth-child(1) > .timepicker-custom > .vue__time-picker > .dropdown > .select-list > .minutes > [data-key="00"]').click()
   
-    cy.get('.createBtn').click({force: true})
+    cy.get('.createBtn > .btn-label > span').click()
+    cy.wait(1000)
   })
 
   /*
