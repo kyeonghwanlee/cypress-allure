@@ -87,7 +87,7 @@ describe('empty spec', () => {
       cy.get('.btn-move > .btn-label > span').contains('클래스로 돌아가기').should('exist')
       cy.get('[style="font-size: 16px; color: rgb(17, 42, 68); margin-right: 10px; cursor: pointer; vertical-align: bottom; font-weight: 600;"]').contains('클래스 공개').should('exist')
       cy.get('.clicked > span').contains('수강생').should('exist')
-      cy.get('.lk-tabs > :nth-child(2) > span').contains('클래스 설정').should('exist')
+      //cy.get('.lk-tabs > :nth-child(2) > span').contains('클래스 설정').should('exist')
       cy.get('.lk-tabs > :nth-child(3) > span').contains('강의관리').should('exist')
       cy.get('.lk-tabs > :nth-child(4) > span').contains('결제설정').should('exist')
       cy.get('.lk-tabs > :nth-child(5) > span').contains('추가정보').should('exist')
@@ -97,7 +97,7 @@ describe('empty spec', () => {
       cy.get('.btn-move > .btn-label > span').contains('Back to class').should('exist')
       cy.get('[style="font-size: 16px; color: rgb(17, 42, 68); margin-right: 10px; cursor: pointer; vertical-align: bottom; font-weight: 600;"]').contains('클래스 공개').should('exist')
       cy.get('.clicked > span').contains('수강생').should('exist')
-      cy.get('.lk-tabs > :nth-child(2) > span').contains('클래스 설정').should('exist')
+      //cy.get('.lk-tabs > :nth-child(2) > span').contains('클래스 설정').should('exist')
       cy.get('.lk-tabs > :nth-child(3) > span').contains('강의관리').should('exist')
       cy.get('.lk-tabs > :nth-child(4) > span').contains('결제설정').should('exist')
       cy.get('.lk-tabs > :nth-child(5) > span').contains('추가정보').should('exist')
@@ -293,12 +293,13 @@ describe('empty spec', () => {
     //결제 설정
     cy.get('.lk-tabs > :nth-child(4) > span').click()
     cy.wait(500)
+    
     //유료 클래스
-    cy.get(':nth-child(1) > :nth-child(1) > .checkmark').click()
+    cy.get('.class-manage-wrapper > :nth-child(1) > :nth-child(1) > .checkmark').click()
 
     //유료 클래스 설정
-    cy.get(':nth-child(1) > :nth-child(2) > [style="display: flex;"] > .lk-input-container > .container-input').clear()
-    cy.get(':nth-child(1) > :nth-child(2) > [style="display: flex;"] > .lk-input-container > .container-input').type('10000')
+    cy.get(':nth-child(1) > .row-inner > :nth-child(3) > [style="display: flex;"] > .lk-input-container > .container-input').clear()
+    cy.get(':nth-child(1) > .row-inner > :nth-child(3) > [style="display: flex;"] > .lk-input-container > .container-input').type('10000')
 
     //할인설정
     cy.get(':nth-child(2) > .checks').click()
