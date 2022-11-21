@@ -123,7 +123,7 @@ describe('empty spec', () => {
     cy.get('.mt30 > .close-button').click({force: true})
     
     //클래스 관리 이동
-    cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').contains('클래스 관리').click()
+    cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').click()
     cy.wait(500)
 
     // 클래스 공개 변환
