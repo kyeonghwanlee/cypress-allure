@@ -172,7 +172,7 @@ describe('empty spec', () => {
         })
     })
 
-    it('7-3 원복', () => {
+    it('7-3.5 원복', () => {
         cy.get(':nth-child(2) > .header-menu-item-btn').click()
         cy.wait(500)
 
@@ -207,14 +207,14 @@ describe('empty spec', () => {
             }else{
                 cy.get('[id="ss"]').then(data=> {
                     if( data.val() == 'true' ){
-                        cy.get(':nth-child(2) > .row-inner > :nth-child(2) > [style="display: flex;"] > .lk-input-container > .container-input').clear()
+                        cy.get(':nth-child(1) > .row-inner > :nth-child(3) > [style="display: flex;"] > .lk-input-container > .container-input').clear()
                         cy.get('.form_group > :nth-child(1) > .row-subtitle').click()
                         cy.get(':nth-child(2) > .checks').click()
                         cy.wait(500)
                     }
                 })
-                cy.get(':nth-child(1) > :nth-child(2) > [style="display: flex;"] > .lk-input-container > .container-input').clear()
-                cy.get(':nth-child(1) > :nth-child(1) > .checkmark').click()
+                cy.get(':nth-child(1) > .row-inner > :nth-child(3) > [style="display: flex;"] > .lk-input-container > .container-input').clear()
+                cy.get('.class-manage-wrapper > :nth-child(1) > :nth-child(1) > .checkmark').click()
                 cy.wait(500)
             }
         })
@@ -231,7 +231,7 @@ describe('empty spec', () => {
         cy.wait(500)    
     })
 
-    it('7-4. 무료로 설정한 클래스에서 수강신청을 한 경우 서비스 구독 수강신청 건수 차감 안 됨', () => {
+    it.only('7-4. 무료로 설정한 클래스에서 수강신청을 한 경우 서비스 구독 수강신청 건수 차감 안 됨', () => {
         cy.get('.ki-user').click()
         cy.get('[href="/service/servicemanage"]').click()
         cy.wait(500)
@@ -351,7 +351,7 @@ describe('empty spec', () => {
         cy.wait(500)
     })
 
-    it('7-5. 유료로 설정한 클래스에서 할인 금액이 0인 경우 서비스 구독 수강신청 건수 차감 안 됨', () => {
+    it.only('7-5. 유료로 설정한 클래스에서 할인 금액이 0인 경우 서비스 구독 수강신청 건수 차감 안 됨', () => {
         cy.get('.ki-user').click()
         cy.get('[href="/service/servicemanage"]').click()
         cy.wait(500)
@@ -502,14 +502,14 @@ describe('empty spec', () => {
             }else{
                 cy.get('[id="ss"]').then(data=> {
                     if( data.val() == 'true' ){
-                        cy.get(':nth-child(2) > .row-inner > :nth-child(2) > [style="display: flex;"] > .lk-input-container > .container-input').clear()
+                        cy.get(':nth-child(1) > .row-inner > :nth-child(3) > [style="display: flex;"] > .lk-input-container > .container-input').clear()
                         cy.get('.form_group > :nth-child(1) > .row-subtitle').click()
                         cy.get(':nth-child(2) > .checks').click()
                         cy.wait(500)
                     }
                 })
-                cy.get(':nth-child(1) > :nth-child(2) > [style="display: flex;"] > .lk-input-container > .container-input').clear()
-                cy.get(':nth-child(1) > :nth-child(1) > .checkmark').click()
+                cy.get(':nth-child(1) > .row-inner > :nth-child(3) > [style="display: flex;"] > .lk-input-container > .container-input').clear()
+                cy.get('.class-manage-wrapper > :nth-child(1) > :nth-child(1) > .checkmark').click()
                 cy.wait(500)
             }
         })
