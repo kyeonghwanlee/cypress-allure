@@ -275,7 +275,7 @@ describe('empty spec', () => {
 
     })
 
-  it.only('6-4. class update(결제 설정)', () => {
+  it('6-4. class update(결제 설정)', () => {
     //프로그램 이동
     cy.get(':nth-child(2) > .header-menu-item-btn').click()
     cy.wait(500)
