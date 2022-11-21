@@ -92,7 +92,13 @@ describe('empty spec', () => {
     //cy.get('[style="margin-top: 19px;"] > .lk-checkbox > .checkmark').click()
 
     cy.get('.lk-button').click()
-    cy.contains('This ID has').should('exist')
+    if( i == 0 ){
+      cy.contains('사용중인 이메일입니다.').should('exist')
+      //cy.contains('약관에 동의하셔야 합니다.').should('exist')
+    }else{
+      cy.contains('This ID has').should('exist')
+      //cy.contains('You must agree to the terms and conditions.').should('exist')
+    }
     cy.get('.lk-mng-button').click()
   })
 

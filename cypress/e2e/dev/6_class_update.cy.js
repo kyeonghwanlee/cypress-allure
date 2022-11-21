@@ -1,10 +1,10 @@
 describe('empty spec', () => {
 
-  const i = 1 //1== github 0=local
+  const i = 0 //1== github 0=local
 
   beforeEach(function () {
     cy.viewport(1920,1080)
-    cy.visit('https://testlee001-staging.staging-liveklass.net/')
+    cy.visit('https://testlee004.dev-liveklass.net/')
     cy.wait(500)
 
     cy.get('.header-action > .outlined > span').click()
@@ -14,8 +14,8 @@ describe('empty spec', () => {
     // id & pw text input
     cy.get('[type="text"]').clear()
     cy.get('[type="password"]').clear()
-    cy.get('.form_group > .lk-input > .lk-input-inner > input').type('kyeonghwan.lee@liveklass.com')
-    cy.get('[style="margin-bottom: 1.25rem;"] > .lk-input > .lk-input-inner > input').type('@Dl292407')
+    cy.get('.form_group > .lk-input > .lk-input-inner > input').type('master@liveklass.com')
+    cy.get('[style="margin-bottom: 1.25rem;"] > .lk-input > .lk-input-inner > input').type('Fkzmf1234!')
     cy.wait(1000)
     cy.get('.lk-button').click()
     cy.wait(500)
@@ -200,7 +200,7 @@ describe('empty spec', () => {
       cy.get(':nth-child(1) > :nth-child(1) > .chk-label').contains('모집 정원').should('exist')
       cy.get(':nth-child(2) > .checks > .chk-label').contains('운영자 선정').should('exist')
       cy.get('.row-inner-white > :nth-child(3) > .checks > .chk-label').contains('모집 기간').should('exist')
-      cy.get(':nth-child(4) > .row-inner-item-label').contains('수강기간').should('exist')
+      cy.get(':nth-child(4) > .row-inner-item-label').contains('수강 기간').should('exist')
       cy.get(':nth-child(5) > .row-inner-item-label').contains('카테고리').should('exist')
       cy.get('.btn-submit > .btn-label > span').contains('변경사항 저장하기').should('exist')
     }else{
@@ -210,7 +210,7 @@ describe('empty spec', () => {
       cy.get(':nth-child(1) > :nth-child(1) > .chk-label').contains('모집 정원').should('exist')
       cy.get(':nth-child(2) > .checks > .chk-label').contains('운영자 선정').should('exist')
       cy.get('.row-inner-white > :nth-child(3) > .checks > .chk-label').contains('모집 기간').should('exist')
-      cy.get(':nth-child(4) > .row-inner-item-label').contains('수강기간').should('exist')
+      cy.get(':nth-child(4) > .row-inner-item-label').contains('수강 기간').should('exist')
       cy.get(':nth-child(5) > .row-inner-item-label').contains('카테고리').should('exist')
       cy.get('.btn-submit > .btn-label > span').contains('변경사항 저장하기').should('exist')
     }
@@ -225,13 +225,13 @@ describe('empty spec', () => {
     cy.get(':nth-child(2) > .lk-textarea > .ui-textarea').clear()
     cy.get(':nth-child(3) > .lk-textarea > .ui-textarea').clear()
     cy.get(':nth-child(4) > .lk-textarea > .ui-textarea').clear()
-    cy.get(':nth-child(7) > .lk-textarea > .ui-textarea').clear()
+    //cy.get(':nth-child(7) > .lk-textarea > .ui-textarea').clear()
     cy.wait(500)
     cy.get(':nth-child(1) > .lk-textarea > .ui-textarea').type('cypress update test')
     cy.get(':nth-child(2) > .lk-textarea > .ui-textarea').type('cypress update test')
     cy.get(':nth-child(3) > .lk-textarea > .ui-textarea').type('cypress update test')
     cy.get(':nth-child(4) > .lk-textarea > .ui-textarea').type('cypress update test')
-    cy.get(':nth-child(7) > .lk-textarea > .ui-textarea').type('cypress update test')
+    //cy.get(':nth-child(7) > .lk-textarea > .ui-textarea').type('cypress update test')
     cy.wait(500)
 
     //모집정원
@@ -240,7 +240,7 @@ describe('empty spec', () => {
     cy.get(':nth-child(1) > :nth-child(3) > .checks > .checkmark').click()
     //cy.get(':nth-child(2) > .checks > .checkmark').click()
     cy.get(':nth-child(4) > .el-select > .el-input > .el-input__inner').click()
-    cy.contains('30 days').click()
+    cy.contains('30일').click()
     cy.wait(500)
 
     cy.contains('변경사항 저장하기').click()
@@ -312,19 +312,19 @@ describe('empty spec', () => {
     cy.get('.lk-tabs > :nth-child(4) > span').click()
     cy.wait(500)
     //유료 클래스
-    cy.get(':nth-child(1) > :nth-child(1) > .checkmark').click()
+    cy.get('.class-manage-wrapper > :nth-child(1) > :nth-child(1) > .checkmark').click()
 
     //유료 클래스 설정
-    cy.get(':nth-child(1) > :nth-child(2) > [style="display: flex;"] > .lk-input-container > .container-input').clear()
-    cy.get(':nth-child(1) > :nth-child(2) > [style="display: flex;"] > .lk-input-container > .container-input').type('10000')
+    cy.get(':nth-child(1) > .row-inner > :nth-child(3) > [style="display: flex;"] > .lk-input-container > .container-input').clear()
+    cy.get(':nth-child(1) > .row-inner > :nth-child(3) > [style="display: flex;"] > .lk-input-container > .container-input').type('10000')
 
     //할인설정
-    cy.get(':nth-child(2) > .checks').click()
-    cy.get(':nth-child(2) > .row-inner > :nth-child(2) > [style="display: flex;"] > .lk-input-container > .container-input').type('1000')
+    cy.get(':nth-child(2) > .checks > .checkmark').click()
+    cy.get(':nth-child(2) > [style="display: flex;"] > .lk-input-container > .container-input').type('1000')
 
     cy.get('.el-date-editor > :nth-child(4)').type('2023-09-30')
 
-    cy.get(':nth-child(2) > .row-subtitle > span').click()
+    cy.get('.form_group > :nth-child(2) > .row-subtitle > span').click()
 
     cy.get('.el-input > .el-input__inner').click()
     cy.contains('5개월').click()
@@ -387,18 +387,18 @@ describe('empty spec', () => {
     cy.get(':nth-child(4) > [style="display: flex;"] > .lk-input-container > .container-input').clear()
     cy.get('.lk-input-inner > input').clear()
     cy.get(':nth-child(2) > .row-inner > :nth-child(2) > [style="display: flex;"] > .lk-input-container > .container-input').clear()
-    cy.get(':nth-child(1) > :nth-child(2) > [style="display: flex;"] > .lk-input-container > .container-input').clear()
+    cy.get(':nth-child(1) > .row-inner > :nth-child(3) > [style="display: flex;"] > .lk-input-container > .container-input').clear()
     
     cy.get(':nth-child(1) > .row-subtitle > span').click()
     cy.get('.class-manage-wrapper > :nth-child(2) > .lk-checkbox > .checkmark').click()
     cy.get(':nth-child(2) > .checks > .checkmark').click()
-    cy.get(':nth-child(1) > :nth-child(1) > .checkmark').click()
+    cy.get('.class-manage-wrapper > :nth-child(1) > :nth-child(1) > .checkmark').click()
     cy.wait(1000)
 
     cy.get('.btn-submit > .btn-label > span').click()
   })
 
-  it('6-5. class update(추가 정보))', () => {
+  it.only('6-5. class update(추가 정보))', () => {
     //프로그램 이동
     cy.get(':nth-child(2) > .header-menu-item-btn').click()
     cy.wait(500)
@@ -418,10 +418,10 @@ describe('empty spec', () => {
     
     if( i == 0 ){
       cy.get('.manage-question-item > .lk-button > .btn-label > span').contains('입력 정보 추가').should('exist')
-      cy.get('.chk-label').contains('추가 정보 사용').should('exist')
+      cy.contains('추가 정보 사용').should('exist')
     }else{
       cy.get('.manage-question-item > .lk-button > .btn-label > span').contains('입력 정보 추가').should('exist')
-      cy.get('.chk-label').contains('추가 정보 사용').should('exist')
+      cy.contains('추가 정보 사용').should('exist')
     }
     cy.wait(500)
 

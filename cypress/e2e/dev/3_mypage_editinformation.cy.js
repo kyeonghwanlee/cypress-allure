@@ -1,6 +1,6 @@
 describe('empty spec', () => {
 
-  const i = 1 //1== github 0=local
+  const i = 0 //1== github 0=local
   
   beforeEach(function () {
     cy.viewport(1920,1080)

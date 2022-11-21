@@ -1,6 +1,6 @@
 describe('empty spec', () => {
 
-  const i = 1 //1== github 0=local
+  const i = 0 //1== github 0=local
 
   beforeEach(function () {
     cy.viewport(1920,1080)
@@ -9,13 +9,13 @@ describe('empty spec', () => {
     // id & pw text input
     cy.get('[type="text"]').clear()
     cy.get('[type="password"]').clear()
-    cy.get('.form_group > .lk-input > .lk-input-inner > input').type('kyeonghwan.lee@liveklass.com')
-    cy.get('[style="margin-bottom: 1.25rem;"] > .lk-input > .lk-input-inner > input').type('@Dl292407')
+    cy.get('.form_group > .lk-input > .lk-input-inner > input').type('master@liveklass.com')
+    cy.get('[style="margin-bottom: 1.25rem;"] > .lk-input > .lk-input-inner > input').type('Fkzmf1234!')
 
     // login button click
     cy.get('.lk-button').click()
     cy.wait(300)
-    cy.visit('https://testlee001-staging.staging-liveklass.net/')
+    cy.visit('https://testlee004.dev-liveklass.net/')
     cy.wait(300)
 
     //cy.get('.lk-select', 2).select('한국어');
@@ -158,8 +158,8 @@ describe('empty spec', () => {
       cy.contains('구독료').should('exist') 
       cy.contains('합계').should('exist') 
       cy.contains('결제금액').should('exist') 
-      cy.contains('현재 사용중인 플랜보다 더 많은 수강 신청을 받을 수 있어요.').should('exist')
-      cy.contains('300GB 만큼 더 사용할 수 있고, 결제 수수료는 5% 로 이용할 수 있어요.').should('exist')
+      //cy.contains('현재 사용중인 플랜보다 더 많은 수강 신청을 받을 수 있어요.').should('exist')
+      //cy.contains('300GB 만큼 더 사용할 수 있고, 결제 수수료는 5% 로 이용할 수 있어요.').should('exist')
     }else{
       cy.contains('구독 취소(A)').should('exist') 
       cy.contains('환불').should('exist') 
@@ -172,10 +172,10 @@ describe('empty spec', () => {
       //cy.contains('300GB 만큼 더 사용할 수 있고, 결제 수수료는 5% 로 이용할 수 있어요.').should('exist')
     }
     
-    cy.get('.sub-btn').click()
-    cy.wait(100)
+    //cy.get('.sub-btn').click()
+    //cy.wait(100)
     
-    cy.get('.lk-close-button').click()
+    //cy.get('.lk-close-button').click()
     //cy.get('.primary > .btn-label > span').click()
     
     /*

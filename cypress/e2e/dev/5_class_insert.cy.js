@@ -1,10 +1,10 @@
 describe('empty spec', () => {
 
-  const i = 1 //1== github 0=local
+  const i = 0 //1== github 0=local
 
   beforeEach(function () {
     cy.viewport(1920,1080)
-    cy.visit('https://testlee001-staging.staging-liveklass.net/')
+    cy.visit('https://testlee004.dev-liveklass.net/')
     cy.wait(100)
 
     cy.get('.header-action > .outlined > span').click()
@@ -14,8 +14,8 @@ describe('empty spec', () => {
     // id & pw text input
     cy.get('[type="text"]').clear()
     cy.get('[type="password"]').clear()
-    cy.get('.form_group > .lk-input > .lk-input-inner > input').type('kyeonghwan.lee@liveklass.com')
-    cy.get('[style="margin-bottom: 1.25rem;"] > .lk-input > .lk-input-inner > input').type('@Dl292407')
+    cy.get('.form_group > .lk-input > .lk-input-inner > input').type('master@liveklass.com')
+    cy.get('[style="margin-bottom: 1.25rem;"] > .lk-input > .lk-input-inner > input').type('Fkzmf1234!')
     cy.wait(500)
     cy.get('.lk-button').click()
     cy.wait(500)
