@@ -333,9 +333,6 @@ describe('empty spec', () => {
 
         cy.get(':nth-child(2) > .lk-card-img > .lk-card-link').click()
         cy.wait(500)
-        
-        cy.get('.mt30 > .close-button').click({force: true})
-        cy.wait(500)
 
         //클래스 관리
         cy.get('.row > #view-step2 > .cv-edit-btn > .btn-label > span').click()
@@ -450,9 +447,7 @@ describe('empty spec', () => {
 
         cy.get(':nth-child(2) > .lk-card-img > .lk-card-link').click()
         cy.wait(500)
-        
-        cy.get('.mt30 > .close-button').click({force: true})
-        cy.wait(500)
+
 
         //클래스 관리
         cy.get('.row > #view-step2 > .cv-edit-btn > .btn-label > span').click()
