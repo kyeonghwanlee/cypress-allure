@@ -275,7 +275,7 @@ describe('empty spec', () => {
 
     })
 
-  it('6-4. class update(결제 설정)', () => {
+  it.only('6-4. class update(결제 설정)', () => {
     //프로그램 이동
     cy.get(':nth-child(2) > .header-menu-item-btn').click()
     cy.wait(500)
@@ -296,31 +296,39 @@ describe('empty spec', () => {
     
     //유료 클래스
     cy.get('.class-manage-wrapper > :nth-child(1) > :nth-child(1) > .checkmark').click()
+    cy.wait(500)
 
     //유료 클래스 설정
     cy.get(':nth-child(1) > .row-inner > :nth-child(3) > [style="display: flex;"] > .lk-input-container > .container-input').clear()
     cy.get(':nth-child(1) > .row-inner > :nth-child(3) > [style="display: flex;"] > .lk-input-container > .container-input').type('10000')
+    cy.wait(500)
 
     //할인설정
     cy.get(':nth-child(2) > .checks').click()
     cy.get(':nth-child(2) > .row-inner > :nth-child(2) > [style="display: flex;"] > .lk-input-container > .container-input').type('1000')
+    cy.wait(500)
 
-    cy.get('.el-date-editor > :nth-child(4)').type('2023-09-30')
-
-    cy.get(':nth-child(2) > .row-subtitle > span').click()
+    //cy.get('.el-date-editor > :nth-child(4)').type('2023-09-30')
+    //cy.wait(500)
+    
+    cy.get('.form_group > :nth-child(2) > .row-subtitle > span').click()
+    cy.wait(500)
 
     cy.get('.el-input > .el-input__inner').click()
     cy.contains('5개월').click()
+    cy.wait(500)
 
     //옵션 설정
     cy.get('.class-manage-wrapper > :nth-child(2) > .lk-checkbox > .checkmark').click()
+    cy.wait(500)
 
     cy.get('.lk-input-inner > input').clear()
     cy.get('.lk-input-inner > input').type('1회 코칭권')
+    cy.wait(500)
 
     cy.get(':nth-child(4) > [style="display: flex;"] > .lk-input-container > .container-input').clear()
     cy.get(':nth-child(4) > [style="display: flex;"] > .lk-input-container > .container-input').type('10000')
-    cy.wait(4000)
+    cy.wait(1000)
 
     cy.get('.btn-submit').click()
     cy.wait(1000)
@@ -336,10 +344,10 @@ describe('empty spec', () => {
       cy.get('.discount.mb6').contains('정가 10,000원 90% 할인').should('exist')
       cy.get('.price').contains('월 200원').should('exist')
     }else{
-      cy.get('.discount-promotion.mb6').contains('Promotion').should('exist')
+      //cy.get('.discount-promotion.mb6').contains('Promotion').should('exist')
       cy.get(':nth-child(3) > .discount').contains('현재 판매가 1,000원').should('exist')
       cy.get('.flex > .discount-promotion').contains('5개월 무이자 할부 시').should('exist')
-      cy.get('.discount.mb6').contains('List price 10,000원').should('exist')
+      //cy.get('.discount.mb6').contains('List price 10,000원').should('exist')
       cy.get('.discount.mb6').contains('90%').should('exist')
       //cy.get('.discount.mb6').contains('discount').should('exist')
       cy.get('.price').contains('월 200원').should('exist')
@@ -370,12 +378,12 @@ describe('empty spec', () => {
     cy.get(':nth-child(4) > [style="display: flex;"] > .lk-input-container > .container-input').clear()
     cy.get('.lk-input-inner > input').clear()
     cy.get(':nth-child(2) > .row-inner > :nth-child(2) > [style="display: flex;"] > .lk-input-container > .container-input').clear()
-    cy.get(':nth-child(1) > :nth-child(2) > [style="display: flex;"] > .lk-input-container > .container-input').clear()
+    cy.get(':nth-child(1) > .row-inner > :nth-child(3) > [style="display: flex;"] > .lk-input-container > .container-input').clear()
     
-    cy.get(':nth-child(1) > .row-subtitle > span').click()
+    cy.get('.form_group > :nth-child(1) > .row-subtitle').click()
     cy.get('.class-manage-wrapper > :nth-child(2) > .lk-checkbox > .checkmark').click()
     cy.get(':nth-child(2) > .checks > .checkmark').click()
-    cy.get(':nth-child(1) > :nth-child(1) > .checkmark').click()
+    cy.get('.class-manage-wrapper > :nth-child(1) > :nth-child(1) > .checkmark').click()
     cy.wait(1000)
 
     cy.get('.btn-submit > .btn-label > span').click()
