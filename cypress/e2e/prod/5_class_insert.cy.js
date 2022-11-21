@@ -37,7 +37,7 @@ describe('empty spec', () => {
     //cy.get('[data-testid="-input"]').clear()
     cy.get('[data-testid="-input"]').type('cypress insert test', {force: true})
     cy.get('.check-area > .lk-checkbox > .checkmark').click()
-    cy.get(':nth-child(4) > .lk-button > .btn-label > span').click()
+    cy.get('.item-area > :nth-child(4) > .lk-button').click()
 
     //cy.get('.class-section > :nth-child(1) > .lk-radio-group > :nth-child(2) > span').click()
     //cy.get('.class-section > :nth-child(1) > .lk-radio-group > :nth-child(3) > span').click()
