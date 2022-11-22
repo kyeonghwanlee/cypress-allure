@@ -231,7 +231,7 @@ describe('empty spec', () => {
         cy.wait(500)    
     })
 
-    it.only('7-4. 무료로 설정한 클래스에서 수강신청을 한 경우 서비스 구독 수강신청 건수 차감 안 됨', () => {
+    it('7-4. 무료로 설정한 클래스에서 수강신청을 한 경우 서비스 구독 수강신청 건수 차감 안 됨', () => {
         cy.get('.ki-user').click()
         cy.get('[href="/service/servicemanage"]').click()
         cy.wait(500)
@@ -249,7 +249,10 @@ describe('empty spec', () => {
 
         //로그아웃
         cy.get('.ki-user').click()
+        cy.wait(500)
+
         cy.get(':nth-child(3) > .lhp-menu-item').click()
+        cy.wait(500)
         
         cy.get('.header-action > .outlined > span').click()
         cy.wait(500)
@@ -328,6 +331,7 @@ describe('empty spec', () => {
         })
 
         // 수강 취소
+        // 수강 취소
         cy.get(':nth-child(2) > .header-menu-item-btn').click()
         cy.wait(500)
 
@@ -339,19 +343,20 @@ describe('empty spec', () => {
         cy.wait(500)
         //cy.get('.attendee-list-body > .search-top-container > .search-item > .lk-checkbox > .checkmark').click()
         //cy.wait(500)
-        cy.get(':nth-child(1) > .attendee-table-row > .name-column > .lk-checkbox > .checkmark').click()
+        //수강생 클릭
+        cy.get('div:nth-child(1) > .attendee-table-row > .name-column > .lk-checkbox > .checkmark').click()
         cy.wait(500)
-        cy.get('.el-select:nth-child(2) > .el-input > .el-input__suffix > .el-input__suffix-inner > .el-select__caret').click()
+        cy.get('.search-top-container > .search-item:nth-child(1) > .el-select > .el-input > .el-input__inner').click()
         cy.wait(500)
-        cy.get('[class="el-select-dropdown__item hover"]').click()
+        cy.get('.hover > span').contains('수강').click()
         cy.wait(500)
-        cy.get('.search-top-container > .search-item > .apply-button > .btn-label > span').click()
+        cy.get('.attendee-list > .attendee-list-body > .search-top-container > .search-item > .apply-button').click()
         cy.wait(500)
         cy.get('.lk-modal-content > .lk-modal-footer > .primary > .btn-label > span').click()
         cy.wait(500)
     })
 
-    it.only('7-5. 유료로 설정한 클래스에서 할인 금액이 0인 경우 서비스 구독 수강신청 건수 차감 안 됨', () => {
+    it('7-5. 유료로 설정한 클래스에서 할인 금액이 0인 경우 서비스 구독 수강신청 건수 차감 안 됨', () => {
         cy.get('.ki-user').click()
         cy.get('[href="/service/servicemanage"]').click()
         cy.wait(500)
@@ -369,8 +374,11 @@ describe('empty spec', () => {
 
         //로그아웃
         cy.get('.ki-user').click()
+        cy.wait(500)
+
         cy.get(':nth-child(3) > .lhp-menu-item').click()
-        
+        cy.wait(500)
+
         cy.get('.header-action > .outlined > span').click()
         cy.wait(500)
     
@@ -448,20 +456,19 @@ describe('empty spec', () => {
         cy.get(':nth-child(2) > .lk-card-img > .lk-card-link').click()
         cy.wait(500)
 
-
         //클래스 관리
         cy.get('.row > #view-step2 > .cv-edit-btn > .btn-label > span').click()
         cy.wait(500)
         //cy.get('.attendee-list-body > .search-top-container > .search-item > .lk-checkbox > .checkmark').click()
         //cy.wait(500)
-        cy.get(':nth-child(1) > .attendee-table-row > .name-column > .lk-checkbox > .checkmark').click()
+        //수강생 클릭
+        cy.get('div:nth-child(1) > .attendee-table-row > .name-column > .lk-checkbox > .checkmark').click()
         cy.wait(500)
-        cy.get('.el-select:nth-child(2) > .el-input > .el-input__suffix > .el-input__suffix-inner > .el-select__caret').click()
+        cy.get('.search-top-container > .search-item:nth-child(1) > .el-select > .el-input > .el-input__inner').click()
         cy.wait(500)
-        //cy.get('[class="el-select-dropdown__item hover"]').click()
-        cy.get('.el-scrollbar > .el-select-dropdown__wrap > .el-scrollbar__view > .hover > span').click()
+        cy.get('.hover > span').contains('수강').click()
         cy.wait(500)
-        cy.get('.search-top-container > .search-item > .apply-button > .btn-label > span').click()
+        cy.get('.attendee-list > .attendee-list-body > .search-top-container > .search-item > .apply-button').click()
         cy.wait(500)
         cy.get('.lk-modal-content > .lk-modal-footer > .primary > .btn-label > span').click()
         cy.wait(500)
