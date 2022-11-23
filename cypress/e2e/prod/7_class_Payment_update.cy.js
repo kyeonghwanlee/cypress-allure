@@ -172,7 +172,7 @@ describe('empty spec', () => {
         })
     })
 
-    it.only('7-3.5 원복', () => {
+    it('7-3.5 원복', () => {
         cy.get(':nth-child(2) > .header-menu-item-btn').click()
         cy.wait(500)
 
@@ -282,7 +282,8 @@ describe('empty spec', () => {
         cy.get('.btn_new_point').click({force: true})
         cy.wait(500)
 
-        cy.get('.popup_b > .btn_common').click({force: true})
+        //cy.get('.popup_b > .btn_common').click({force: true})
+        cy.contains('확인').click({force: true})
         cy.wait(500)
 
         //로그아웃
@@ -408,7 +409,7 @@ describe('empty spec', () => {
         cy.get('.btn_center_box > .btn_new_point').click({force: true})
         cy.wait(500)
 
-        cy.get('.popup_b > .btn_common').click({force: true})
+        cy.contains('확인').click({force: true})
         cy.wait(500)
         //로그아웃
         cy.get('.ki-user').click({force: true})
