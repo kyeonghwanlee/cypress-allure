@@ -574,7 +574,7 @@ describe('empty spec', () => {
   })
 
 
-  it('6-7. class update(강의 관리- 라이브 미팅 추가))', () => {
+  it('6-7. class update(강의 관리- 동영상 강의 추가))', () => {
     //프로그램 이동
     cy.get(':nth-child(2) > .header-menu-item-btn').click()
     cy.wait(500)

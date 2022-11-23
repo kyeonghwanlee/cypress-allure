@@ -87,7 +87,7 @@ describe('empty spec', () => {
         cy.wait(500)
 
         //결제 설정
-        cy.get('.lk-tabs > :nth-child(4) > span').click()
+        cy.get('.lk-tabs > :nth-child(4)').click({force: true})
         cy.wait(500)
 
         cy.get('[id="fareCd"]').then(data=> {
@@ -115,7 +115,7 @@ describe('empty spec', () => {
         })
 
         //결제 설정
-        cy.get('.lk-tabs > :nth-child(4) > span').click()
+        cy.get('.lk-tabs > :nth-child(4)').click({force: true})
         cy.wait(500)
 
         //할인적용 클릭 후 팝업 확인
@@ -143,7 +143,7 @@ describe('empty spec', () => {
         cy.wait(500)
 
         //결제 설정
-        cy.get('.lk-tabs > :nth-child(4) > span').click()
+        cy.get('.lk-tabs > :nth-child(4)').click({force: true})
         cy.wait(500)
 
         cy.get('[id="fareCd"]').then(data=> {
@@ -172,7 +172,7 @@ describe('empty spec', () => {
         })
     })
 
-    it('7-3.5 원복', () => {
+    it.only('7-3.5 원복', () => {
         cy.get(':nth-child(2) > .header-menu-item-btn').click()
         cy.wait(500)
 
@@ -199,7 +199,7 @@ describe('empty spec', () => {
         })
 
         //결제 설정
-        cy.get('.lk-tabs > :nth-child(4)').click()
+        cy.get('.lk-tabs > :nth-child(4)').click({force: true})
         cy.wait(500)
 
         cy.get('[id="fareCd"]').then(data=> {
@@ -231,7 +231,7 @@ describe('empty spec', () => {
         cy.wait(500)    
     })
 
-    it('7-4. 무료로 설정한 클래스에서 수강신청을 한 경우 서비스 구독 수강신청 건수 차감 안 됨', () => {
+    it.only('7-4. 무료로 설정한 클래스에서 수강신청을 한 경우 서비스 구독 수강신청 건수 차감 안 됨', () => {
         cy.get('.ki-user').click()
         cy.get('[href="/service/servicemanage"]').click()
         cy.wait(500)
@@ -276,11 +276,13 @@ describe('empty spec', () => {
         cy.get('.pay').click()
         cy.wait(500)
 
-        cy.get('label > span').click()
-        cy.get('.btn_center_box > .btn_new_point').click()
+        cy.get('label > span').click({force: true})
         cy.wait(500)
 
-        cy.get('.popup_b > .btn_common').click()
+        cy.get('.btn_new_point').click({force: true})
+        cy.wait(500)
+
+        cy.get('.popup_b > .btn_common').click({force: true})
         cy.wait(500)
 
         //로그아웃
@@ -402,15 +404,16 @@ describe('empty spec', () => {
         cy.wait(1000)
 
         cy.get('label > span').click()
-        cy.get('.btn_center_box > .btn_new_point').click()
+        cy.wait(500)
+        cy.get('.btn_center_box > .btn_new_point').click({force: true})
         cy.wait(500)
 
-        cy.get('.popup_b > .btn_common').click()
+        cy.get('.popup_b > .btn_common').click({force: true})
         cy.wait(500)
         //로그아웃
-        cy.get('.ki-user').click()
+        cy.get('.ki-user').click({force: true})
         cy.wait(500)
-        cy.get(':nth-child(3) > .lhp-menu-item').click()
+        cy.get(':nth-child(3) > .lhp-menu-item').click({force: true})
         cy.wait(500)
 
         //로그인
@@ -501,7 +504,7 @@ describe('empty spec', () => {
         })
 
         //결제 설정
-        cy.get('.lk-tabs > :nth-child(4)').click()
+        cy.get('.lk-tabs > :nth-child(4)').click({force: true})
         cy.wait(500)
 
         cy.get('[id="fareCd"]').then(data=> {
