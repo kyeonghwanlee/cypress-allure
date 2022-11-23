@@ -1,0 +1,3 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"failed","Wed Nov 23 00:17:02 GMT 2022","Wed Nov 23 00:18:12 GMT 2022","70400","","empty spec","","","","7-4. 무료로 설정한 클래스에서 수강신청을 한 경우 서비스 구독 수강신청 건수 차감 안 됨",""
+"passed","Wed Nov 23 00:16:01 GMT 2022","Wed Nov 23 00:17:02 GMT 2022","61334","","empty spec","","","","7-3.5 원복",""

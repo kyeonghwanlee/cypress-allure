@@ -1,0 +1,1 @@
+[{"uid":"4e082f56206b866e","name":"7-3.5 원복","time":{"start":1669162561133,"stop":1669162622467,"duration":61334},"status":"passed","severity":"normal"},{"uid":"840691f04cdf0e8","name":"7-4. 무료로 설정한 클래스에서 수강신청을 한 경우 서비스 구독 수강신청 건수 차감 안 됨","time":{"start":1669162622527,"stop":1669162692927,"duration":70400},"status":"failed","severity":"normal"}]
