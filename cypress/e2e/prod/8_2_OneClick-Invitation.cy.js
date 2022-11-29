@@ -52,7 +52,7 @@ describe('empty spec', () => {
             
     })
 
-    it.only('8-4. 줌 권한 없는 강사 초대', () => {
+    it('8-4. 줌 권한 없는 강사 초대', () => {
         // id & pw text input
         cy.get('[type="text"]').clear()
         cy.get('[type="password"]').clear()
@@ -96,7 +96,7 @@ describe('empty spec', () => {
            
    })
 
-   it.only('8-5. 강사 알림톡 전송', () => {
+   it('8-5. 강사 알림톡 전송', () => {
     // id & pw text input
     cy.get('[type="text"]').clear()
     cy.get('[type="password"]').clear()
@@ -122,7 +122,5 @@ describe('empty spec', () => {
     cy.get('#view-step2 > .cv-edit-btn > .btn-label > span').click()
     cy.wait(500)
 
-    
-
-   })
+    })
 })
