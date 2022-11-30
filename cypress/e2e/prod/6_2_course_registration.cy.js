@@ -1,5 +1,3 @@
-const { cwd } = require("process")
-
 describe('empty spec', () => {
 
     const i = 1 //1== github 0=local
